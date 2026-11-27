@@ -1,0 +1,55 @@
+{
+  "slug": "cold-chain-risk-predictor",
+  "field": "supply",
+  "order": 45,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "stats"
+  ],
+  "references": [],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Cold Chain Risk Predictor",
+  "area": "Cold chain monitoring",
+  "short": "Predicts temperature excursions in storage and transport from logger, route and weather data — before vaccines and biologics are exposed.",
+  "symptom": "Temperature excursions are discovered after delivery",
+  "ingredient": "An excursion early-warning for the cold chain",
+  "directions": "Connect data loggers and shipment plans. Get excursion-risk scores per shipment and live alerts while products are in transit.",
+  "problem": "Temperature data from loggers is usually reviewed after the shipment arrives; excursions are discovered too late to prevent product loss.",
+  "why": "Excursions can destroy vaccines, insulin and biologics worth large amounts and interrupt patient supply.",
+  "solution": "Learns which routes, packaging, seasons and handover points lead to excursions, scores each planned shipment and monitors live logger data to alert before limits are exceeded.",
+  "architecture": [
+    "Logger & shipment data",
+    "Route, packaging & weather features",
+    "Excursion-risk model",
+    "Live alerts",
+    "Quality decision on product"
+  ],
+  "data": [
+    "Temperature logger histories",
+    "Shipment routes, packaging and handover times",
+    "Weather data and product stability limits"
+  ],
+  "technology": [
+    "Time-series prediction",
+    "Risk scoring",
+    "IoT data integration"
+  ],
+  "impact": [
+    "Fewer excursions",
+    "Less product loss",
+    "Faster, evidence-based release decisions"
+  ],
+  "limitations": [
+    "Prediction does not replace validated monitoring and alarms",
+    "Product disposition depends on approved stability data"
+  ],
+  "review": [
+    "Quality assurance decides on the disposition of any exposed product."
+  ],
+  "published": false
+}

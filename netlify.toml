@@ -1,0 +1,41 @@
+[build]
+  command = "node build.js"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Long cache for images, fonts and assets; HTML always fresh
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# The first article was replaced by a broader one; keep old links working
+[[redirects]]
+  from = "/article-where-ai-helps-in-pharmacy"
+  to = "/article-ai-across-the-pharmaceutical-industry"
+  status = 301
+[[redirects]]
+  from = "/ar/article-where-ai-helps-in-pharmacy"
+  to = "/ar/article-ai-across-the-pharmaceutical-industry"
+  status = 301
+
+# Point AI assistants to the llms.txt guide (as leading pharmacy publications do)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Link = '</llms.txt>; rel="describedby"; type="text/markdown"'
+    X-Llms-Txt = "/llms.txt"
+
+[[headers]]
+  for = "/*.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

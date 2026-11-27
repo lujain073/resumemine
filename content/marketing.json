@@ -1,0 +1,207 @@
+{
+  "audiences": [
+    {
+      "k": "companies",
+      "t": "Pharmaceutical companies",
+      "who": "Manufacturers, scientific offices and agents",
+      "pain": "Launching and growing brands in a crowded market — with every claim tied to the registration file and every channel watched by the regulator.",
+      "make": [
+        "Product launch campaigns",
+        "Detailing aids and e-detailing for healthcare professionals",
+        "Product and explainer videos",
+        "Medical-rep training content and quizzes",
+        "Conference and booth material",
+        "Brand websites and landing pages"
+      ],
+      "channels": [
+        "Medical reps",
+        "Scientific events",
+        "Email to healthcare professionals",
+        "LinkedIn",
+        "Brand website"
+      ],
+      "compliance": "Prescription medicines are promoted to healthcare professionals only, and every claim must match the registered product information."
+    },
+    {
+      "k": "pharmacies",
+      "t": "Pharmacies",
+      "who": "Independent pharmacies and chains",
+      "pain": "Competing with chains and online sellers on trust, service and footfall — without advertising prescription medicines or making unapproved health claims.",
+      "make": [
+        "Seasonal offer campaigns for OTC, skincare and baby care",
+        "Social posts and short videos",
+        "Health-awareness content",
+        "Loyalty and refill-reminder messages",
+        "Google Business profile and local search",
+        "In-store screens and posters"
+      ],
+      "channels": [
+        "Instagram & Facebook",
+        "WhatsApp Business",
+        "Google Maps",
+        "In-store"
+      ],
+      "compliance": "Promote the pharmacy’s services, categories and permitted products — never prescription medicines. OTC advertising in the media needs prior JFDA approval."
+    },
+    {
+      "k": "warehouses",
+      "t": "Drug warehouses & distributors",
+      "who": "Wholesalers and distribution companies",
+      "pain": "Selling B2B to hundreds of pharmacies: keeping them up to date on the portfolio, offers and new agencies, and standing out from other distributors.",
+      "make": [
+        "Digital product catalogs",
+        "B2B offer bulletins for pharmacies",
+        "New-agency and new-product announcements",
+        "Sales-team pitch decks",
+        "Short product-training videos",
+        "Company profile and website"
+      ],
+      "channels": [
+        "WhatsApp broadcasts to pharmacies",
+        "Sales reps",
+        "Email",
+        "LinkedIn"
+      ],
+      "compliance": "Trade communication goes to licensed pharmacies, and product information stays within the registered label."
+    },
+    {
+      "k": "individuals",
+      "t": "Pharmacists & healthcare professionals",
+      "who": "Practitioners, consultants and trainers",
+      "pain": "Building a trusted professional presence — for a career move, a consultancy or a training business — without the time to produce content every week.",
+      "make": [
+        "Personal brand, bio and positioning",
+        "Portfolio websites like this one",
+        "Educational posts and carousels",
+        "Short educational videos",
+        "CV and professional profiles",
+        "Course and workshop promotion"
+      ],
+      "channels": [
+        "LinkedIn",
+        "Instagram",
+        "Personal website",
+        "YouTube"
+      ],
+      "compliance": "Educational, evidence-based content — no endorsement of specific prescription brands to the public."
+    },
+    {
+      "k": "products",
+      "t": "Products",
+      "who": "OTC medicines, supplements, cosmetics, baby care and medical devices",
+      "pain": "A product needs a clear story that sells — but health and cosmetic claims are tightly controlled, and AI will invent claims if nobody checks it.",
+      "make": [
+        "Product naming and positioning",
+        "Pack shots and AI visuals",
+        "Product videos and reels",
+        "E-commerce and listing copy",
+        "Plain-language summaries of the leaflet",
+        "Influencer and sampling briefs"
+      ],
+      "channels": [
+        "Social media",
+        "Pharmacy shelf & point of sale",
+        "E-commerce",
+        "Influencers"
+      ],
+      "compliance": "Only approved claims; a product is advertised only after registration, with JFDA approval for media advertising where required."
+    }
+  ],
+  "goals": [
+    {
+      "k": "launch",
+      "t": "Launch",
+      "angle": "Introduce something new with one clear, approved message.",
+      "kpi": "Reach in the target audience · listings in pharmacies · first-month sell-in"
+    },
+    {
+      "k": "awareness",
+      "t": "Awareness & education",
+      "angle": "Educate first, sell second — trust is the product.",
+      "kpi": "Engagement rate · saves and shares · questions received"
+    },
+    {
+      "k": "sales",
+      "t": "Sales & offers",
+      "angle": "A specific, time-limited reason to act now.",
+      "kpi": "Footfall or orders · offer redemptions · basket size"
+    },
+    {
+      "k": "loyalty",
+      "t": "Loyalty & retention",
+      "angle": "Stay useful between purchases with reminders and care.",
+      "kpi": "Repeat purchases · refill rate · WhatsApp opt-ins"
+    }
+  ],
+  "process": [
+    {
+      "t": "Brief",
+      "d": "Audience, product, goal and budget — agreed on one page."
+    },
+    {
+      "t": "Claim check",
+      "d": "Every claim is checked against the registered product information, the leaflet and the evidence."
+    },
+    {
+      "t": "AI production",
+      "d": "Copy, visuals, video, web pages and interactive content, produced with AI in Arabic and English."
+    },
+    {
+      "t": "Pharmacist review",
+      "d": "I review every piece for accuracy, audience and tone before you see it."
+    },
+    {
+      "t": "Approval",
+      "d": "Your medical or regulatory sign-off, plus JFDA approval wherever the law requires it."
+    },
+    {
+      "t": "Launch & learn",
+      "d": "Publish, measure and improve — and pass any side-effect reports in the comments to pharmacovigilance."
+    }
+  ],
+  "rules": [
+    {
+      "t": "Prescription medicines stay with professionals",
+      "d": "In Jordan, direct promotion of medicines to patients is prohibited; approved promotional material targets healthcare providers only."
+    },
+    {
+      "t": "Registered products, registered claims",
+      "d": "No medicine is advertised before it is registered, and no ad says anything that is not in its registration file."
+    },
+    {
+      "t": "Approval before the media",
+      "d": "Advertising non-prescription medicines in any media — including social platforms — needs prior JFDA approval."
+    },
+    {
+      "t": "No unapproved health claims",
+      "d": "Since June 2026, Jordanian media may not publish ads with health or nutrition claims, such as “under pharmaceutical supervision” or “fat-burning”, without JFDA approval."
+    },
+    {
+      "t": "Selling stays in the pharmacy",
+      "d": "Campaigns never push the online sale of medicines, which the JFDA actively pursues."
+    },
+    {
+      "t": "Honest AI",
+      "d": "No fake doctors, patients or testimonials, no patient data in prompts, and every claim traceable to a source."
+    }
+  ],
+  "references": [
+    {
+      "title": "JFDA framework on medicine advertising (Arab News, 12 Aug 2024)",
+      "url": "https://www.arabnews.com/node/2567136/middle-east"
+    },
+    {
+      "title": "Jordan Media Commission: health-claim ads need JFDA approval (Petra, 24 Jun 2026)",
+      "url": "https://www.petra.gov.jo/en/news/media-outlets-told-to-verify-health-claims-in-advertisements"
+    },
+    {
+      "title": "JFDA refers 30 websites and platforms for illegally selling medicines (Petra, 12 May 2026)",
+      "url": "https://petra.gov.jo/cgi-bin/index.php/en/news/jfda-30-websites-digital-platforms-referred-to-authorities-for-illegally-selling-medicines"
+    },
+    {
+      "title": "WHO — Ethical criteria for medicinal drug promotion (1988)",
+      "url": "https://www.who.int/publications/i/item/9241541239"
+    }
+  ],
+  "note": "Rules summarised from public reports for orientation only; always confirm the current requirements with the JFDA before publishing."
+}

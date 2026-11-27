@@ -1,0 +1,61 @@
+{
+  "slug": "antimicrobial-stewardship-assistant",
+  "field": "hospital",
+  "order": 64,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "rules",
+    "ml",
+    "llm"
+  ],
+  "references": [
+    {
+      "title": "WHO — The WHO AWaRe (Access, Watch, Reserve) antibiotic book (2022)",
+      "url": "https://www.who.int/publications/i/item/9789240062382"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Antimicrobial Stewardship Assistant",
+  "area": "Antimicrobial stewardship",
+  "short": "Reviews antibiotic orders against local guidelines and culture results, and prompts timely de-escalation, IV-to-oral switch and duration review.",
+  "symptom": "Antibiotics run longer and broader than needed",
+  "ingredient": "A stewardship review list for the hospital pharmacist",
+  "directions": "Connect antibiotic orders and microbiology results. Each morning the stewardship pharmacist gets a prioritized review list with suggested actions.",
+  "problem": "Stewardship teams cannot review every antibiotic order daily; opportunities to narrow therapy, switch to oral or stop on time are missed.",
+  "why": "Unnecessary broad-spectrum use drives antimicrobial resistance, adverse effects and cost.",
+  "solution": "Matches each order with indication, culture and sensitivity results, renal function and local guidelines, then ranks patients where de-escalation, IV-to-oral switch, dose adjustment or stopping should be considered.",
+  "architecture": [
+    "Antibiotic orders & microbiology",
+    "Patient factors (renal function, allergies)",
+    "Guideline rules & risk scoring",
+    "Prioritized review list",
+    "Stewardship pharmacist & prescriber"
+  ],
+  "data": [
+    "Antibiotic orders and administration records",
+    "Culture and sensitivity results",
+    "Local antibiotic guidelines and resistance patterns"
+  ],
+  "technology": [
+    "Clinical rules engine",
+    "Risk prioritization",
+    "Language model for note summaries"
+  ],
+  "impact": [
+    "More timely de-escalation",
+    "Shorter, appropriate durations",
+    "Support for resistance control"
+  ],
+  "limitations": [
+    "Depends on timely microbiology results",
+    "Local guidelines and resistance data must stay current"
+  ],
+  "review": [
+    "The stewardship pharmacist and prescriber decide every change to therapy."
+  ],
+  "published": false
+}

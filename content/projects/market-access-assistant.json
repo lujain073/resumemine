@@ -1,0 +1,61 @@
+{
+  "slug": "market-access-assistant",
+  "field": "commercial",
+  "order": 56,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "llm",
+    "rag",
+    "stats"
+  ],
+  "references": [
+    {
+      "title": "ISPOR — The Professional Society for Health Economics and Outcomes Research",
+      "url": "https://www.ispor.org/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Market Access & Pricing Intelligence Assistant",
+  "area": "Market access & HEOR",
+  "short": "Organizes pricing references, reimbursement rules and health-economic evidence to prepare market access dossiers faster.",
+  "symptom": "Pricing and reimbursement files take months to prepare",
+  "ingredient": "An evidence organizer for market access teams",
+  "directions": "Choose the product and target market. Get a structured evidence pack: comparators, reference prices, budget-impact inputs and evidence gaps.",
+  "problem": "Market access teams must collect clinical and economic evidence, comparator prices, reference-pricing rules and payer requirements for each country, often from scratch.",
+  "why": "Slow or weak dossiers delay patient access and reduce the chance of listing at a sustainable price.",
+  "solution": "Retrieves and organizes published clinical and economic evidence, tracks comparator and reference prices from public sources, structures budget-impact inputs and highlights evidence gaps for the health-economics team.",
+  "architecture": [
+    "Product & target market",
+    "Evidence and price retrieval",
+    "Structured evidence pack",
+    "Budget-impact inputs & gaps",
+    "HEOR team analysis"
+  ],
+  "data": [
+    "Published clinical and economic studies",
+    "Public price lists and reimbursement rules",
+    "Epidemiology and utilization data"
+  ],
+  "technology": [
+    "Retrieval with citations",
+    "Structured extraction",
+    "Budget-impact model inputs"
+  ],
+  "impact": [
+    "Faster dossier preparation",
+    "Clear view of evidence gaps",
+    "Consistent evidence across countries"
+  ],
+  "limitations": [
+    "Health-economic models must be built and validated by experts",
+    "Pricing rules differ and change by country"
+  ],
+  "review": [
+    "Health economists and market access managers build the models and sign off every submission."
+  ],
+  "published": false
+}

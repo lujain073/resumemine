@@ -1,0 +1,68 @@
+{
+  "slug": "signal-detection-monitor",
+  "field": "safety",
+  "order": 82,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "stats",
+    "llm"
+  ],
+  "references": [
+    {
+      "title": "CIOMS — Council for International Organizations of Medical Sciences (signal management guidance)",
+      "url": "https://cioms.ch/"
+    },
+    {
+      "title": "Uppsala Monitoring Centre — WHO Programme for International Drug Monitoring",
+      "url": "https://who-umc.org/"
+    },
+    {
+      "title": "MedDRA — Medical Dictionary for Regulatory Activities",
+      "url": "https://www.meddra.org/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Safety Signal Detection & PSUR Support",
+  "area": "Signal detection, PSUR & safety report analysis",
+  "short": "Screens safety databases for disproportionate drug–event combinations and drafts structured summaries to support signal assessment and PSUR writing.",
+  "symptom": "Safety signals hide in thousands of case reports",
+  "ingredient": "A signal screen and summary assistant for PV teams",
+  "directions": "Connect the company safety database or public data. Get a prioritized list of potential signals with case series summaries for medical review.",
+  "problem": "Pharmacovigilance teams must periodically review large case volumes for new or changing risks and summarize them in periodic safety reports, under strict timelines.",
+  "why": "A missed signal delays label updates and risk minimization; manual case-series review is slow.",
+  "solution": "Applies disproportionality statistics to case data, groups related MedDRA terms, compares with the known safety profile, and drafts case-series summaries and PSUR section inputs with references to the underlying cases.",
+  "architecture": [
+    "Case data (company or public)",
+    "Disproportionality analysis",
+    "Comparison with known label",
+    "Prioritized potential signals",
+    "Safety physician assessment"
+  ],
+  "data": [
+    "Individual case safety reports (ICSRs)",
+    "MedDRA-coded events and product information",
+    "Exposure / sales data for context"
+  ],
+  "technology": [
+    "Disproportionality statistics",
+    "Language model for case-series summaries",
+    "Signal tracking"
+  ],
+  "impact": [
+    "Earlier signal detection",
+    "Faster case-series review",
+    "More consistent periodic reports"
+  ],
+  "limitations": [
+    "Statistical signals are hypotheses, not proof of causality",
+    "Reporting biases affect spontaneous report data"
+  ],
+  "review": [
+    "Safety physicians and the QPPV assess every signal and approve periodic reports."
+  ],
+  "published": false
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "trial-data-quality-monitor",
+  "field": "rd",
+  "order": 4,
+  "phase": 2,
+  "status": "Conceptual",
+  "techTags": [
+    "stats",
+    "ml"
+  ],
+  "references": [
+    {
+      "title": "ICH efficacy guidelines (E6 Good Clinical Practice)",
+      "url": "https://www.ich.org/page/efficacy-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Clinical Trial Data Quality Monitor",
+  "area": "Clinical trials",
+  "short": "Supports risk-based monitoring by flagging unusual sites, missing data and protocol deviations across a trial.",
+  "symptom": "Data problems in trials are found at the last minute",
+  "ingredient": "A central monitor for trial data",
+  "directions": "Connect the trial database extracts. Get site-level risk indicators and data anomalies for the monitoring team each week.",
+  "problem": "Monitors review large volumes of case report form data; inconsistent entries, missing visits and unusual site patterns are often detected late, close to database lock.",
+  "why": "Late data issues delay database lock and can undermine the reliability of trial results.",
+  "solution": "Calculates key risk indicators per site, detects statistical anomalies (for example unusual variance or digit preference) and lists open queries and deviations so monitors know where to look first.",
+  "architecture": [
+    "EDC data extracts",
+    "Data checks & key risk indicators",
+    "Site anomaly detection",
+    "Risk dashboard",
+    "Monitor follow-up"
+  ],
+  "data": [
+    "Case report form data from the EDC system",
+    "Visit schedule and protocol deviations",
+    "Query logs"
+  ],
+  "technology": [
+    "Statistical anomaly detection",
+    "Key risk indicators",
+    "Dashboards"
+  ],
+  "impact": [
+    "Earlier detection of data issues",
+    "Focused, risk-based monitoring",
+    "Cleaner database lock"
+  ],
+  "limitations": [
+    "Statistical flags indicate where to look, not proof of misconduct",
+    "Must be validated within the sponsor’s quality system"
+  ],
+  "review": [
+    "Clinical monitors and data managers investigate every flag and document the outcome."
+  ],
+  "published": false
+}

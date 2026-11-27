@@ -1,0 +1,60 @@
+{
+  "slug": "raw-material-demand-predictor",
+  "field": "manufacturing",
+  "order": 14,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "stats"
+  ],
+  "references": [
+    {
+      "title": "Hyndman & Athanasopoulos — Forecasting: Principles and Practice (open textbook)",
+      "url": "https://otexts.com/fpp3/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Raw Material Demand Predictor",
+  "area": "Raw material management",
+  "short": "Turns the production plan and sales forecast into raw-material and packaging-material requirements, with shortage and expiry alerts.",
+  "symptom": "Production stops because one excipient ran out",
+  "ingredient": "A material requirements forecaster",
+  "directions": "Connect the production plan, bills of materials and stock. Get time-phased material needs, reorder dates and expiry risks.",
+  "problem": "APIs, excipients and packaging materials have long and variable lead times, minimum order quantities and retest dates; a single missing material can stop a batch.",
+  "why": "Material shortages stop production; over-buying ties up cash and leads to expired or re-tested stock.",
+  "solution": "Explodes forecast production through bills of materials, compares requirements with stock, open orders, retest/expiry dates and supplier lead times, and recommends what to order and when.",
+  "architecture": [
+    "Sales forecast & production plan",
+    "Bill-of-materials explosion",
+    "Stock, orders & retest dates",
+    "Shortage and expiry risk",
+    "Buyer approval"
+  ],
+  "data": [
+    "Production plan and sales forecast",
+    "Bills of materials",
+    "Material stock, retest/expiry dates, open purchase orders, lead times"
+  ],
+  "technology": [
+    "Demand forecasting",
+    "Material requirements planning logic",
+    "Risk scoring"
+  ],
+  "impact": [
+    "Fewer material-related stoppages",
+    "Less expired material",
+    "Lower working capital"
+  ],
+  "limitations": [
+    "Depends on accurate bills of materials and stock records",
+    "Supplier disruptions can exceed any forecast"
+  ],
+  "review": [
+    "Buyers and planners approve every purchase; QA status of materials is never overridden."
+  ],
+  "published": false
+}

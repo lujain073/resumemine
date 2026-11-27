@@ -1,0 +1,61 @@
+{
+  "slug": "supplier-risk-assessment",
+  "field": "supply",
+  "order": 42,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "llm",
+    "rules"
+  ],
+  "references": [
+    {
+      "title": "ICH quality guidelines (Q9 quality risk management, Q10 pharmaceutical quality system)",
+      "url": "https://www.ich.org/page/quality-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Supplier Risk Assessment System",
+  "area": "Supplier risk & supplier quality",
+  "short": "Scores API, excipient and service suppliers on quality, delivery and dependency risk to focus audits and dual-sourcing efforts.",
+  "symptom": "A single supplier problem stops the whole product",
+  "ingredient": "A risk radar for suppliers",
+  "directions": "Load supplier performance, audit and complaint data. Get a ranked risk register with the reasons behind each score.",
+  "problem": "Companies depend on many suppliers, often single-sourced; quality issues, late deliveries, regulatory actions and concentration risk are tracked in separate systems.",
+  "why": "Supplier failures cause shortages, quality defects and regulatory findings, and supplier oversight is a GMP expectation.",
+  "solution": "Combines delivery performance, complaint and deviation history, audit outcomes, public regulatory actions and dependency (single source, single country) into an explainable risk score that guides audits and mitigation.",
+  "architecture": [
+    "Supplier data & audits",
+    "Public regulatory actions",
+    "Risk scoring",
+    "Risk register & mitigation",
+    "Quality & procurement decision"
+  ],
+  "data": [
+    "Delivery performance and complaints",
+    "Audit results and supplier deviations",
+    "Supplier location and sourcing structure"
+  ],
+  "technology": [
+    "Risk scoring models",
+    "Language model for audit-report summaries",
+    "Rule-based thresholds"
+  ],
+  "impact": [
+    "Risk-based audit planning",
+    "Earlier mitigation of single-source risks",
+    "Fewer supply disruptions"
+  ],
+  "limitations": [
+    "Public information about suppliers is incomplete",
+    "Scores must be calibrated with quality and procurement experts"
+  ],
+  "review": [
+    "Supplier quality and procurement teams approve risk ratings and mitigation actions."
+  ],
+  "published": false
+}

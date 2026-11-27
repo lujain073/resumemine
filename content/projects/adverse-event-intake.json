@@ -1,0 +1,65 @@
+{
+  "slug": "adverse-event-intake",
+  "field": "safety",
+  "order": 81,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "ICH E2B(R3) — electronic transmission of safety reports",
+      "url": "https://www.ich.org/page/efficacy-guidelines"
+    },
+    {
+      "title": "MedDRA — Medical Dictionary for Regulatory Activities",
+      "url": "https://www.meddra.org/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Adverse Event Case Intake",
+  "area": "ADR & ICSR processing",
+  "short": "Turns adverse event reports from emails, calls and forms into structured, coded safety cases.",
+  "symptom": "Safety reports pile up unprocessed",
+  "ingredient": "An intake assistant for pharmacovigilance teams",
+  "directions": "Forward the report. Get the four minimum criteria checked, fields extracted, MedDRA terms suggested and seriousness flagged for the safety officer.",
+  "problem": "Adverse event reports arrive as free text in emails, calls and forms; entering them into the safety database is slow and repetitive, and reporting timelines are strict.",
+  "why": "Late or incomplete case processing risks missed safety signals and regulatory non-compliance.",
+  "solution": "Checks the four minimum criteria for a valid case, extracts patient, drug, event and reporter details, suggests MedDRA coding, detects likely duplicates, and flags serious cases for fast reporting.",
+  "technology": [
+    "Information extraction",
+    "MedDRA coding suggestions",
+    "Duplicate detection",
+    "Seriousness triage"
+  ],
+  "impact": [
+    "Faster case processing",
+    "On-time reporting",
+    "More consistent coding"
+  ],
+  "architecture": [
+    "Incoming report",
+    "Validity check",
+    "Field extraction & coding",
+    "Duplicate & seriousness check",
+    "Safety officer review"
+  ],
+  "limitations": [
+    "Needs a licensed MedDRA dictionary and validated systems",
+    "Causality and seriousness are confirmed by the safety officer"
+  ],
+  "techTags": [
+    "llm",
+    "rules"
+  ],
+  "data": [
+    "Incoming reports (email, call notes, forms)",
+    "Licensed MedDRA dictionary",
+    "Safety database fields (ICH E2B)"
+  ],
+  "review": [
+    "The safety officer confirms validity, coding, seriousness and causality before any report is submitted."
+  ],
+  "published": false
+}

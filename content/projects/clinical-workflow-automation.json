@@ -1,0 +1,60 @@
+{
+  "slug": "clinical-workflow-automation",
+  "order": 63,
+  "title": "Clinical Workflow Automation",
+  "area": "Clinical Workflow Automation",
+  "short": "AI agents that take repetitive admin work off the pharmacist’s desk.",
+  "phase": 1,
+  "status": "Conceptual",
+  "problem": "Insurance approvals, documentation and reminders take time away from patients.",
+  "why": "Every hour returned to clinical work improves care.",
+  "solution": "Narrow AI agents that draft repetitive admin work, with a pharmacist approval step before anything is sent.",
+  "technology": [
+    "AI agents",
+    "Form filling",
+    "Approval queue"
+  ],
+  "impact": [
+    "Time back for patients",
+    "Consistent records",
+    "No missed follow-ups"
+  ],
+  "architecture": [
+    "Task trigger",
+    "Agent drafts the work",
+    "Checks & validation",
+    "Pharmacist approval",
+    "Send & log"
+  ],
+  "limitations": [
+    "Still mapping workflows",
+    "Patient data must stay in secure systems"
+  ],
+  "references": [
+    {
+      "title": "WHO — Ethics and governance of AI for health",
+      "url": "https://www.who.int/publications/i/item/9789240029200"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "symptom": "Paperwork eats the pharmacist’s day",
+  "ingredient": "Small AI agents for admin tasks",
+  "directions": "One agent per task. Drafts insurance requests, logs and orders — pharmacist approves before sending.",
+  "field": "hospital",
+  "techTags": [
+    "agent",
+    "llm"
+  ],
+  "data": [
+    "Task templates (insurance forms, logs, orders)",
+    "Access to the relevant systems",
+    "Approval rules"
+  ],
+  "review": [
+    "Nothing is sent or saved without pharmacist approval."
+  ],
+  "published": false
+}

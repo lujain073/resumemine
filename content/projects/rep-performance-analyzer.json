@@ -1,0 +1,60 @@
+{
+  "slug": "rep-performance-analyzer",
+  "field": "commercial",
+  "order": 55,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "llm"
+  ],
+  "references": [
+    {
+      "title": "IFPMA — Code of Practice for the pharmaceutical industry",
+      "url": "https://www.ifpma.org/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Medical Representative Performance Analyzer",
+  "area": "Medical representative analytics",
+  "short": "Helps managers coach medical representatives with fair, context-aware insight into call quality, coverage and outcomes.",
+  "symptom": "Rep performance is judged on sales alone",
+  "ingredient": "A coaching assistant for field force managers",
+  "directions": "Connect CRM call records, territory potential and sales. Managers get coaching insights per representative, with territory context.",
+  "problem": "Representatives are often evaluated on raw sales, which depends heavily on territory potential, tenders and stock — not only on their work quality.",
+  "why": "Unfair evaluation demotivates good representatives and hides real coaching needs.",
+  "solution": "Adjusts results for territory potential, analyses call frequency, coverage of target prescribers and message consistency with approved material, and suggests specific coaching points rather than rankings alone.",
+  "architecture": [
+    "CRM calls & coverage",
+    "Territory potential & sales",
+    "Context-adjusted indicators",
+    "Coaching insights",
+    "Manager conversation"
+  ],
+  "data": [
+    "CRM visit records and target lists",
+    "Territory potential and sales",
+    "Approved key messages"
+  ],
+  "technology": [
+    "Benchmarking with territory adjustment",
+    "Language model for call-note analysis",
+    "Dashboards"
+  ],
+  "impact": [
+    "Fairer evaluation",
+    "Targeted coaching",
+    "Better compliance with approved messages"
+  ],
+  "limitations": [
+    "Employee data must be handled lawfully and transparently",
+    "Must not be used as automated disciplinary decision-making"
+  ],
+  "review": [
+    "Managers use insights for coaching conversations; all personnel decisions remain human and follow HR policy."
+  ],
+  "published": false
+}

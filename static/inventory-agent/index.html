@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pharmacy Inventory Agent — Working Prototype | Lujain Abu Ghanemeh</title>
+<meta name="description" content="A working prototype of an AI-assisted pharmacy inventory agent: stock cover, stockout alerts, batch-level expiry risk with FEFO, financial exposure and a daily PDF report for the pharmacist.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/*
+VOICE   A calm clinical work tool: the pharmacist's morning stock check, not a marketing page.
+IDEA    The dispensary stock card: each medicine is a line with its cover, its expiry and one clear action.
+PICTURE The live result itself: alert strip, six summary figures, then tabbed tables.
+COLOUR  Site navy + teal; risk colours only on risk (red critical, orange high, amber warning, green safe).
+TYPE    Fraunces for titles and figures, Manrope for data. Layout: input panel first, results below.
+*/
+:root{color-scheme:light;--navy:#0B1B33;--teal:#2FA79B;--teal-ink:#1d7f75;--sand:#E8DCCB;--bg:#fff;--soft:#f5f7f9;--ink:#13233a;--muted:#55647a;--line:#e2e7ee;
+  --crit:#bf2929;--exp:#8c0d0d;--high:#d96b14;--warn:#b98a00;--ok:#21885a;--r:16px;--serif:"Fraunces",Georgia,serif;--sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--soft);color:var(--ink);font:15.5px/1.55 var(--sans);overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-ink)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0;text-wrap:balance}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:62px;flex-wrap:wrap}
+.top a{color:#c9d4e2;text-decoration:none;font-size:14.5px;font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+.top a:hover{color:#fff}
+.top b{font-family:var(--serif);font-weight:400;font-size:19px;color:#fff}
+.chip{display:inline-flex;align-items:center;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.chip.proto{background:rgba(47,167,155,.18);color:#9fe3da;border:1px solid rgba(47,167,155,.5)}
+
+.hero{background:var(--navy);color:#eef3f8;padding:28px 0 36px}
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start}
+.hero h1{font-size:clamp(30px,3.6vw,44px);font-weight:300;margin-bottom:12px}
+.hero p{color:#c7d3e1;margin:0 0 10px;max-width:56ch}
+.hero ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:14.5px;color:#dbe4ee}
+.hero li{display:flex;gap:10px}.hero li::before{content:"";flex:none;width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--teal)}
+.panel{background:#fff;color:var(--ink);border-radius:20px;padding:22px;box-shadow:0 30px 70px -40px rgba(0,0,0,.7)}
+.panel h2{font-size:22px;margin-bottom:4px}
+.panel .hint{font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.drop{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.file{position:relative;display:grid;gap:2px;padding:14px;border:1.5px dashed var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s,background .2s;min-height:86px}
+.file:hover,.file.over{border-color:var(--teal);background:#f3fbfa}
+.file.has{border-style:solid;border-color:var(--teal);background:#f3fbfa}
+.file input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.file b{font-size:14.5px}.file span{font-size:12.5px;color:var(--muted);overflow-wrap:anywhere}
+.file em{font-style:normal;font-size:11.5px;font-weight:700;color:var(--teal-ink)}
+.opts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.opts label{display:grid;gap:4px;font-size:12.5px;font-weight:600;color:var(--muted)}
+.opts input,.opts select{font:15px var(--sans);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px 10px;min-height:44px;width:100%;background:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:1px solid transparent;font:600 15px var(--sans);cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s}
+.btn.primary{background:var(--teal);color:#fff}.btn.primary:hover{background:#29978c}
+.btn.line{background:#fff;color:var(--ink);border-color:var(--line)}.btn.line:hover{border-color:var(--teal);color:var(--teal-ink)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.privacy{font-size:12.5px;color:var(--muted);margin:12px 0 0;display:flex;gap:8px;align-items:flex-start}
+.privacy::before{content:"";flex:none;width:12px;height:14px;margin-top:2px;border:1.6px solid var(--teal-ink);border-radius:3px 3px 4px 4px;box-shadow:inset 0 5px 0 -3px #fff}
+.msg{margin:12px 0 0;padding:10px 14px;border-radius:12px;font-size:14px;display:none}
+.msg.on{display:block}.msg.err{background:#fdecec;color:var(--crit)}.msg.info{background:#eef7f6;color:var(--teal-ink)}
+
+main{padding:28px 0 60px}
+.empty-state{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:40px 24px;text-align:center;color:var(--muted)}
+.empty-state b{display:block;font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink);margin-bottom:6px}
+.res-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;margin-bottom:16px}
+.res-head h2{font-size:clamp(24px,2.6vw,32px)}
+.res-head p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:2px}
+.tile b{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.4vw,32px);line-height:1.1}
+.tile span{font-size:12.5px;color:var(--muted)}
+.tile.bad b{color:var(--crit)}.tile.good b{color:var(--ok)}
+
+.alerts{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:16px;overflow:hidden}
+.alerts>header{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.alerts h3{font-size:20px}
+.alert-list{max-height:380px;overflow:auto}
+.al{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 16px;padding:12px 18px;border-bottom:1px solid var(--line);border-inline-start:4px solid var(--c,var(--line))}
+.al:last-child{border-bottom:0}
+.al .lv{font-size:12.5px;font-weight:700;color:var(--c)}
+.al .lv small{display:block;font-weight:500;color:var(--muted)}
+.al b{font-size:15px}
+.al .facts{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--muted);margin:2px 0}
+.al .facts span{white-space:nowrap}
+.al p{margin:0;font-size:14px}
+.ok-line{padding:16px 18px;color:var(--ok);font-weight:600}
+
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;margin-bottom:-1px;position:relative;z-index:1}
+.tabs button{flex:none;min-height:44px;padding:0 16px;border:1px solid var(--line);border-bottom:0;border-radius:12px 12px 0 0;background:var(--soft);color:var(--muted);font:600 14px var(--sans);cursor:pointer}
+.tabs button[aria-selected=true]{background:#fff;color:var(--ink)}
+.tabs button .n{display:inline-block;margin-inline-start:6px;font-size:11.5px;background:var(--line);border-radius:999px;padding:1px 7px;color:var(--ink)}
+.tabs button .n.r{background:#fdecec;color:var(--crit)}
+.pane{background:#fff;border:1px solid var(--line);border-radius:0 var(--r) var(--r) var(--r);padding:18px}
+.pane[hidden]{display:none}
+.pane-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.pane-tools input{font:15px var(--sans);border:1px solid var(--line);border-radius:10px;padding:9px 12px;min-height:44px;width:min(320px,100%)}
+.pane h4{font-family:var(--serif);font-weight:400;font-size:19px;margin:18px 0 8px}
+.pane h4:first-child{margin-top:0}
+.note{font-size:13px;color:var(--muted);margin:0 0 10px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:12px;font-weight:700;color:var(--muted);text-align:start;padding:9px 10px;border-bottom:1.5px solid var(--line);white-space:nowrap;background:#fff;position:sticky;top:0}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:end;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:hover td{background:#fafbfc}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;background:color-mix(in srgb,var(--c) 13%,#fff);color:var(--c)}
+.why{font-size:12.5px;color:var(--muted);margin-top:3px}
+details.why summary{cursor:pointer;color:var(--teal-ink);font-weight:600}
+.bar{height:6px;border-radius:3px;background:var(--line);margin-top:6px;overflow:hidden;width:120px}
+.bar i{display:block;height:100%;background:var(--c,var(--teal))}
+.plan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.plan section{border:1px solid var(--line);border-radius:14px;padding:16px}
+.plan h4{margin:0 0 8px}
+.plan ol{margin:0;padding-inline-start:20px;display:grid;gap:8px;font-size:14px}
+.kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.kv div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid}
+.kv small{font-size:12.5px;color:var(--muted)}.kv b{font-family:var(--serif);font-weight:400;font-size:22px}
+.kv .strong{background:#f3fbfa;border-color:#bfe5e0}
+.issues{margin:0;padding-inline-start:20px;font-size:14px;display:grid;gap:6px}
+.pdf-view{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pdf-view header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.pdf-view iframe{width:100%;height:80vh;border:0;display:block}
+.how{margin-top:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.how section{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.how h3{font-size:21px;margin-bottom:8px}
+.how p,.how li{font-size:14px}
+.cols{font-size:13px}
+.cols td:first-child{font-weight:600;white-space:nowrap}
+pre{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px;overflow-x:auto;margin:8px 0}
+footer.f{padding:26px 0;color:var(--muted);font-size:13px;text-align:center}
+
+@media (max-width:1080px){.tiles{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.hero-in,.how,.plan{grid-template-columns:1fr}.opts{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){
+  body{font-size:15px}
+  .top b{font-size:16px}.top .chip{display:none}
+  .drop,.kv{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr}
+  .al{grid-template-columns:1fr}
+  .btns .btn{flex:1 1 100%}
+  .stack thead{display:none}.stack tr{display:grid;padding:10px 0;border-bottom:1px solid var(--line)}
+  .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8.5em;text-align:start!important;white-space:normal}
+  .stack td::before{content:attr(data-l);float:inline-start;width:8em;margin-inline-start:-8.5em;font-size:12px;font-weight:700;color:var(--muted)}
+  .stack td:empty{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a href="../projects.html">← Projects</a>
+    <b>Pharmacy Inventory Agent</b>
+    <span class="chip proto">Working prototype</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Your pharmacy’s stock, checked like a pharmacist would.</h1>
+      <p>Upload the inventory and sales files. The agent finds medicines about to run out, batches about to expire unsold, and money tied up on the shelf — then writes tonight’s report.</p>
+      <ul>
+        <li>Days of cover, stockout dates and lead-time alerts for every medicine</li>
+        <li>Expiry risk per batch, with First-Expired-First-Out sell-through</li>
+        <li>Reorder quantities with the calculation shown — never placed automatically</li>
+        <li>Losses at purchase cost only, and missing data flagged instead of guessed</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>Run the agent</h2>
+      <p class="hint">CSV or Excel. Column names are matched automatically — see the template below.</p>
+      <div class="drop">
+        <label class="file" id="f-inv"><input type="file" accept=".csv,.xlsx,.xls,text/csv" data-k="inv"><b>Inventory file</b><span>Required · one row per batch</span><em></em></label>
+        <label class="file" id="f-sales"><input type="file" accept=".csv,.xlsx,.xls,text/csv" data-k="sales"><b>Sales history</b><span>Optional · date, drug, quantity</span><em></em></label>
+      </div>
+      <div class="opts">
+        <label>Report date<input type="date" id="o-date"></label>
+        <label>Review period<select id="o-review"><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option></select></label>
+        <label>Service level<select id="o-sl"><option value="90">90%</option><option value="95" selected>95%</option><option value="97.5">97.5%</option><option value="99">99%</option></select></label>
+        <label>Currency<input id="o-cur" value="JOD" maxlength="4"></label>
+      </div>
+      <div class="btns">
+        <button class="btn primary" id="run" type="button" disabled>Analyze my files</button>
+        <button class="btn line" id="sample" type="button">Try with a sample pharmacy</button>
+      </div>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      <p class="privacy">Files are processed inside your browser. Nothing is uploaded or stored.</p>
+    </div>
+  </div>
+</section>
+
+<main class="wrap" id="main">
+  <div id="out"><div class="empty-state"><b>No analysis yet</b>Upload your files, or try the sample pharmacy to see a full report.</div></div>
+
+  <div class="how">
+    <section>
+      <h3>File template</h3>
+      <p>Inventory: one row per batch. Only <b>drug name</b> and <b>current stock</b> are required; every extra column improves the analysis.</p>
+      <div class="scroll"><table class="cols"><tbody>
+        <tr><td>drug_name</td><td>Medicine name and strength (required)</td></tr>
+        <tr><td>current_stock</td><td>Units on hand for this batch (required)</td></tr>
+        <tr><td>daily_sales</td><td>Average units sold per day — not needed if you upload sales history</td></tr>
+        <tr><td>expiry_date</td><td>YYYY-MM-DD, DD/MM/YYYY or MM/YYYY</td></tr>
+        <tr><td>batch_number</td><td>Batch or lot number</td></tr>
+        <tr><td>purchase_price</td><td>Cost per unit — used for every financial figure</td></tr>
+        <tr><td>selling_price</td><td>Retail price per unit (informational)</td></tr>
+        <tr><td>supplier, lead_time_days</td><td>Who supplies it and how many days delivery takes</td></tr>
+        <tr><td>min_stock, max_stock</td><td>Your minimum and maximum stock levels</td></tr>
+      </tbody></table></div>
+      <p>Sales history: <b>date, drug_name, quantity_sold</b> — one row per medicine per day.</p>
+      <div class="btns"><button class="btn line" id="tpl-copy" type="button">Copy inventory template</button><button class="btn line" id="tpl-dl" type="button">Download templates</button></div>
+      <pre id="tpl" hidden></pre>
+    </section>
+    <section>
+      <h3>How the agent decides</h3>
+      <ol>
+        <li><b>Days of cover</b> = sellable stock ÷ average daily sales (last 28 days of history). Expired units are excluded.</li>
+        <li><b>Critical</b>: cover shorter than supplier lead time · <b>High</b>: out within 3 days · <b>Warning</b>: within 7 days · <b>Reorder notice</b>: at or near minimum stock.</li>
+        <li><b>Reorder quantity</b> = demand × (lead time + review period) + safety stock − stock, capped at maximum stock. Safety stock needs 14+ days of history.</li>
+        <li><b>Expiry</b>: Critical ≤ 30 days, High ≤ 60, Moderate ≤ 90, per batch. Unsold quantity assumes earliest-expiry batches are dispensed first.</li>
+        <li><b>Money</b> uses purchase price only. Without it, the agent says losses cannot be calculated.</li>
+      </ol>
+      <p class="note">This prototype runs when you open it. The planned version connects to the pharmacy system, sends the PDF every night at 11:00 PM (Amman time) and pushes critical stockout alerts immediately.</p>
+    </section>
+  </div>
+</main>
+<footer class="f">Prototype by <a href="../index.html">Lujain Abu Ghanemeh</a>, pharmacist · Decision support only — the pharmacist approves every inventory decision.</footer>
+
+<script src="engine.js"></script>
+<script src="report.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

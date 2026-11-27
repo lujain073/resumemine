@@ -1,0 +1,61 @@
+{
+  "slug": "promo-compliance-checker",
+  "field": "commercial",
+  "order": 51,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "WHO — Ethical criteria for medicinal drug promotion",
+      "url": "https://www.who.int/publications/i/item/9241541239"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Promotional Material Compliance Checker",
+  "area": "Medical & Marketing",
+  "short": "Checks every claim in promotional material against the approved product information before it goes out.",
+  "symptom": "Promotional materials stall in medical review",
+  "ingredient": "A claim checker for marketing and medical teams",
+  "directions": "Upload the leaflet or slide. Each claim is matched to the approved label and references, with unsupported claims highlighted.",
+  "problem": "Marketing materials go through many review rounds because claims, indications and references must match the approved product information exactly.",
+  "why": "Off-label or unsupported claims create legal, ethical and reputational risk; slow reviews delay launches.",
+  "solution": "Extracts each claim, matches it to the approved label (SmPC) and cited references, and flags off-label, overstated or unsupported statements for the medical reviewer.",
+  "technology": [
+    "Claim extraction",
+    "Label matching",
+    "Reference checking"
+  ],
+  "impact": [
+    "Fewer review rounds",
+    "Lower compliance risk",
+    "Faster campaign launches"
+  ],
+  "architecture": [
+    "Promotional material",
+    "Claim extraction",
+    "Match to approved label",
+    "Reference check",
+    "Medical reviewer approval"
+  ],
+  "limitations": [
+    "Rules differ by country and company code",
+    "Final approval stays with medical and regulatory reviewers"
+  ],
+  "techTags": [
+    "llm",
+    "rag"
+  ],
+  "data": [
+    "Draft promotional material",
+    "Approved product information (SmPC/label)",
+    "Cited references",
+    "Applicable code of practice"
+  ],
+  "review": [
+    "Medical and regulatory reviewers approve every material; the tool prepares the review."
+  ],
+  "published": false
+}

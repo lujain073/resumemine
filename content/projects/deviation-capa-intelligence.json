@@ -1,0 +1,60 @@
+{
+  "slug": "deviation-capa-intelligence",
+  "field": "quality",
+  "order": 21,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "ICH quality guidelines (Q9 risk management, Q10 quality system)",
+      "url": "https://www.ich.org/page/quality-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Deviation & CAPA Intelligence",
+  "area": "Deviation, CAPA & root cause analysis",
+  "short": "Finds the patterns hidden across hundreds of deviation reports and helps QA write stronger investigations.",
+  "symptom": "The same deviations keep coming back",
+  "ingredient": "A pattern finder for deviation and CAPA records",
+  "directions": "Feed in past deviation reports. See recurring root causes, similar past cases and a draft investigation for QA to complete.",
+  "problem": "Deviations are investigated one at a time, so recurring root causes across lines, products and shifts are easy to miss.",
+  "why": "Repeat deviations mean weak CAPAs, batch losses and inspection findings.",
+  "solution": "Classifies deviations, links each new one to similar past cases and their CAPAs, highlights recurring causes, and drafts an investigation outline that QA reviews and approves.",
+  "technology": [
+    "Text classification",
+    "Similar-case search",
+    "Trend dashboards"
+  ],
+  "impact": [
+    "Fewer repeat deviations",
+    "Faster investigations",
+    "Stronger inspection readiness"
+  ],
+  "architecture": [
+    "Deviation reports",
+    "Classification",
+    "Similar-case search",
+    "Recurring-cause trends",
+    "QA review & approval"
+  ],
+  "limitations": [
+    "Requires validated, access-controlled systems (GMP data integrity)",
+    "Drafts support QA; they never close a deviation"
+  ],
+  "techTags": [
+    "llm",
+    "ml"
+  ],
+  "data": [
+    "Historical deviation reports and investigations",
+    "CAPA records and effectiveness checks",
+    "Product, line, equipment and shift metadata"
+  ],
+  "review": [
+    "QA classifies, investigates and approves every deviation and CAPA in the validated quality system."
+  ],
+  "published": false
+}

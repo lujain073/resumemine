@@ -1,0 +1,60 @@
+{
+  "slug": "production-planning-optimizer",
+  "field": "manufacturing",
+  "order": 11,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "opt",
+    "ml"
+  ],
+  "references": [
+    {
+      "title": "FDA CDER — Artificial Intelligence in Drug Manufacturing, discussion paper (2023)",
+      "url": "https://www.fda.gov/media/165743/download"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Production Planning Optimizer",
+  "area": "Production planning",
+  "short": "Builds feasible production schedules that respect equipment, cleaning, staff and material constraints — and re-plans when something changes.",
+  "symptom": "The production plan breaks every time something changes",
+  "ingredient": "A constraint-aware scheduling assistant",
+  "directions": "Load orders, capacities and constraints. Compare optimized schedule options and see the impact of each change before approving.",
+  "problem": "Planners juggle demand, equipment availability, cleaning and changeover times, campaign rules, staff and material arrivals in spreadsheets; one delay can cascade through the whole plan.",
+  "why": "Poor schedules mean idle equipment, excess changeovers, overtime and late deliveries — and ultimately shortages.",
+  "solution": "Formulates scheduling as an optimization problem with GMP-relevant constraints (cleaning validation, campaign lengths, line clearance), generates alternative schedules and quickly re-plans when an order, machine or material changes.",
+  "architecture": [
+    "Orders & forecasts",
+    "Capacity & constraint model",
+    "Schedule optimization",
+    "What-if scenarios",
+    "Planner approval"
+  ],
+  "data": [
+    "Production orders and forecasts",
+    "Equipment capacity, cleaning and changeover times",
+    "Material availability and staffing"
+  ],
+  "technology": [
+    "Mathematical optimization (constraint programming)",
+    "Demand forecasts",
+    "Scenario simulation"
+  ],
+  "impact": [
+    "Higher equipment utilization",
+    "Fewer changeovers",
+    "More reliable delivery dates"
+  ],
+  "limitations": [
+    "Only as good as the constraint data entered",
+    "Unusual events still need planner judgment"
+  ],
+  "review": [
+    "The production planner reviews and approves every schedule before release to the floor."
+  ],
+  "published": false
+}

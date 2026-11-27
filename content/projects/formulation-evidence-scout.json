@@ -1,0 +1,60 @@
+{
+  "slug": "formulation-evidence-scout",
+  "field": "rd",
+  "order": 1,
+  "phase": 1,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "PubMed — biomedical literature",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Formulation Research Assistant (Evidence Scout)",
+  "area": "Pre-formulation & R&D",
+  "short": "An AI research assistant that gathers excipient-compatibility and pre-formulation evidence in hours, not weeks.",
+  "symptom": "Pre-formulation literature takes weeks to review",
+  "ingredient": "A literature scout for formulation scientists",
+  "directions": "Enter the API and dosage form. Get a sourced summary of stability, compatibility and excipient evidence to review.",
+  "problem": "Formulation teams spend weeks searching papers and monographs for API–excipient compatibility, degradation pathways and prior formulations.",
+  "why": "Slow evidence gathering delays development, and missed incompatibilities surface late as stability failures.",
+  "solution": "A retrieval assistant that searches approved sources, extracts compatibility and stability findings into a structured table, and links every finding to its source for the scientist to verify.",
+  "technology": [
+    "Literature retrieval",
+    "Structured extraction",
+    "Source-linked summaries"
+  ],
+  "impact": [
+    "Faster pre-formulation reviews",
+    "Fewer late stability surprises",
+    "Reusable evidence tables"
+  ],
+  "architecture": [
+    "API + dosage form",
+    "Search approved sources",
+    "Extract findings",
+    "Evidence table with links",
+    "Scientist review"
+  ],
+  "limitations": [
+    "Only as complete as the sources it can access",
+    "Summaries must be verified against the original papers"
+  ],
+  "techTags": [
+    "llm",
+    "rag"
+  ],
+  "data": [
+    "API physicochemical properties",
+    "Published papers and excipient monographs",
+    "Internal pre-formulation reports (if available)"
+  ],
+  "review": [
+    "A formulation scientist verifies every extracted finding against its source before it is used in a development decision."
+  ],
+  "published": false
+}

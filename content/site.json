@@ -1,0 +1,438 @@
+{
+  "siteUrl": "https://your-domain.com",
+  "name": "Lujain",
+  "fullName": "Lujain Abu Ghanemeh",
+  "role": "Pharmacist & AI Marketing Specialist for the Pharmaceutical Sector",
+  "positioning": "Pharmacist · CPD-certified in AI for Business · AI marketing for pharma",
+  "location": "Amman, Jordan",
+  "brandConcept": "Where pharmaceutical knowledge meets AI-powered marketing.",
+  "tagline": "AI-powered marketing for the pharmaceutical sector — made by a pharmacist, compliant by design.",
+  "theme": {
+    "navy": "#0B1B33",
+    "teal": "#2FA79B",
+    "sand": "#E8DCCB"
+  },
+  "seo": {
+    "home": {
+      "title": "Lujain Abu Ghanemeh | AI Marketing for the Pharmaceutical Sector",
+      "description": "Pharmacist and AI marketing specialist in Amman: AI-made campaigns, videos, websites and content for pharma companies, pharmacies, drug warehouses and pharmacists."
+    },
+    "about": {
+      "title": "About Lujain Abu Ghanemeh — Pharmacist & AI Marketing Specialist",
+      "description": "Pharmacist (B.Sc. Pharmacy, University of Petra, GPA 3.8/4.0) with three years in pharma sales and business development, now creating AI-powered pharmaceutical marketing."
+    },
+    "projects": {
+      "title": "Pharmaceutical AI Project Explorer — 32 Projects in 9 Fields | Lujain Abu Ghanemeh",
+      "description": "Search and filter 32 pharmaceutical AI projects by field, technology and development stage — from drug discovery and manufacturing to regulatory, supply chain, medical affairs and pharmacovigilance."
+    },
+    "research": {
+      "title": "Research & Innovation — Pharmacy AI Notes | Lujain Abu Ghanemeh",
+      "description": "Research on where AI can genuinely transform the pharmaceutical industry, from drug discovery to patient care, with regulatory and scientific references."
+    },
+    "skills": {
+      "title": "Skills & Technologies — Pharmacy and AI | Lujain Abu Ghanemeh",
+      "description": "An honest map of skills across pharmaceutical sciences, AI agents, prompt engineering, workflow automation, healthcare informatics and data analysis."
+    },
+    "contact": {
+      "title": "Contact Lujain Abu Ghanemeh — AI Marketing for Pharma",
+      "description": "Email lujainahmad073@gmail.com about AI-powered marketing for pharmaceutical companies, pharmacies, drug warehouses and pharmacists, or about roles and collaborations."
+    },
+    "fields": {
+      "title": "Pharmaceutical Field Guide for AI — 9 Fields | Lujain Abu Ghanemeh",
+      "description": "A guide to nine pharmaceutical fields — their workflows, sub-areas and the AI project opportunities in each, from R&D to pharmacovigilance."
+    },
+    "faq": {
+      "title": "FAQ — Pharmaceutical AI, Experience & Contact | Lujain Abu Ghanemeh",
+      "description": "Answers about Lujain Abu Ghanemeh: pharmaceutical AI focus, AI certification, fields covered, data privacy, languages, opportunities and how to get in touch."
+    },
+    "marketing": {
+      "title": "AI Marketing for Pharma Companies, Pharmacies & Warehouses | Lujain",
+      "description": "Compliance-first AI marketing for the pharmaceutical sector: product launches, pharmacy promotions, distributor catalogs, HCP content and pharmacist personal brands."
+    }
+  },
+  "hero": {
+    "headline": "Pharmaceutical marketing, made with AI — and checked by a pharmacist.",
+    "subheadline": "I help pharmaceutical companies, pharmacies, drug warehouses and pharmacists market their products and services with AI: campaigns, videos, websites, content and interactive experiences — fast to produce and built to respect medicine-advertising rules.",
+    "intro": "Pharmacist by training, marketer by experience. Three years in pharmaceutical sales and business development showed me how medicines are really sold — to doctors, to pharmacies and to patients — and how easily a campaign can cross a regulatory line. I combine that with AI production to make marketing that is faster, more creative and safe to publish.",
+    "primaryCta": "Build a campaign",
+    "secondaryCta": "Let’s Connect"
+  },
+  "about": {
+    "lead": "I am a pharmacist and AI marketing specialist for the pharmaceutical sector, certified in AI for Business (CPD). I use AI to create marketing for pharmaceutical companies, pharmacies, distributors and healthcare professionals — and I check every claim the way a pharmacist would.",
+    "body": "My background spans community pharmacy, laboratory work, a COVID-19 vaccination center and three years in pharmaceutical sales and business development, with training in regulation and the drug lifecycle. That mix taught me how medicines move: from registration, to the brand, the warehouse, the pharmacy shelf and the patient.\n\nI don’t approach marketing like an agency that has never read a leaflet. I approach it as a pharmacist who knows what a product is approved for, what may be said to the public and what only to healthcare professionals, and where a claim needs evidence. AI lets me produce campaigns, videos and websites quickly; pharmaceutical knowledge keeps them accurate and compliant.",
+    "education": [
+      {
+        "degree": "B.Sc. Pharmacy",
+        "institution": "University of Petra, Amman",
+        "year": "2022",
+        "note": "GPA 3.8 / 4.0 (Excellent) · Academic achievement award, 4 years"
+      },
+      {
+        "degree": "Master’s degree in Pharmacy",
+        "institution": "",
+        "year": "Planned",
+        "note": "Currently choosing a program and specialization."
+      }
+    ],
+    "interests": [
+      "AI-powered marketing for pharmaceutical products and services",
+      "Compliant promotion and medicine-advertising rules",
+      "Medication safety and error prevention",
+      "Pharmaceutical manufacturing and quality",
+      "Regulatory affairs and the drug lifecycle",
+      "Pharmacovigilance and drug safety signals",
+      "Supply chain, shortages and inventory"
+    ],
+    "expertise": [
+      "Pharmaceutical marketing, campaigns and brand content",
+      "Pharmacology, drug interactions and patient counseling",
+      "Community pharmacy workflow and dispensing",
+      "Pharmaceutical sales, brands and customer relationships",
+      "Translating pharmacy problems into clear AI requirements"
+    ],
+    "development": [
+      "CPD-certified training: AI for Business to Increase Productivity — Relevancy Academy (15 hours, Nov 2026)",
+      "Structured daily self-study in AI foundations (ongoing)",
+      "Hands-on practice with AI assistants, prompting and agents",
+      "Preparing for a Master’s degree in Pharmacy"
+    ]
+  },
+  "skills": [
+    {
+      "category": "Pharmaceutical Marketing",
+      "items": [
+        {
+          "name": "Pharmaceutical sales & B2B relationships",
+          "level": 3
+        },
+        {
+          "name": "Campaign planning & content calendars",
+          "level": 3
+        },
+        {
+          "name": "Social media content for pharma & pharmacy brands",
+          "level": 3
+        },
+        {
+          "name": "Medicine-advertising compliance (Jordan)",
+          "level": 2
+        },
+        {
+          "name": "Marketing analytics & KPIs",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "category": "Pharmaceutical Sciences",
+      "items": [
+        {
+          "name": "Pharmacology & therapeutics",
+          "level": 3
+        },
+        {
+          "name": "Drug interactions & contraindications",
+          "level": 3
+        },
+        {
+          "name": "Patient counseling",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "category": "Pharmaceutical Business",
+      "items": [
+        {
+          "name": "Pharmaceutical sales",
+          "level": 3
+        },
+        {
+          "name": "Customer relationship management",
+          "level": 3
+        },
+        {
+          "name": "Product communication",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "category": "AI-Powered Creation",
+      "items": [
+        {
+          "name": "Websites & landing pages",
+          "level": 3
+        },
+        {
+          "name": "Videos & motion",
+          "level": 3
+        },
+        {
+          "name": "Marketing campaigns",
+          "level": 3
+        },
+        {
+          "name": "Content & presentations",
+          "level": 3
+        },
+        {
+          "name": "Games & interactive experiences",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "category": "Prompt Engineering",
+      "items": [
+        {
+          "name": "Structured prompting for clinical text",
+          "level": 2
+        },
+        {
+          "name": "Output checking against references",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "category": "AI Agents",
+      "items": [
+        {
+          "name": "Agent workflow design",
+          "level": 1
+        },
+        {
+          "name": "Tool-using assistants",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "category": "Workflow Automation",
+      "items": [
+        {
+          "name": "Mapping pharmacy workflows",
+          "level": 2
+        },
+        {
+          "name": "No-code automation tools",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "category": "AI & Machine Learning",
+      "items": [
+        {
+          "name": "Core ML concepts",
+          "level": 1
+        },
+        {
+          "name": "Python for AI",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "category": "Healthcare Informatics",
+      "items": [
+        {
+          "name": "Clinical data & coding systems",
+          "level": 1
+        },
+        {
+          "name": "Patient data privacy principles",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "category": "Data Analysis",
+      "items": [
+        {
+          "name": "Spreadsheet analysis",
+          "level": 2
+        },
+        {
+          "name": "Sales & demand data",
+          "level": 2
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "email": "lujainahmad073@gmail.com",
+    "linkedin": "",
+    "intro": "The best way to reach me is by email. I work with pharmaceutical companies, pharmacies, drug warehouses and healthcare professionals on AI-powered marketing — and I’m open to pharmaceutical marketing and AI roles.",
+    "roles": [
+      "AI Marketing Specialist — Pharmaceutical Sector",
+      "Pharmaceutical Digital Marketing",
+      "Medical & Promotional Content Creation",
+      "Marketing Consultant for Pharmacies & Distributors",
+      "Pharmaceutical AI Specialist",
+      "AI-Powered Content & Digital Product Creation"
+    ]
+  },
+  "arabicName": "لجين أبو غنيمة",
+  "highlights": [
+    {
+      "value": "3.8",
+      "label": "GPA out of 4.0 — Excellent"
+    },
+    {
+      "value": "4 yrs",
+      "label": "Academic achievement award"
+    },
+    {
+      "value": "3 yrs",
+      "label": "Pharmaceutical sales & business development"
+    },
+    {
+      "value": "CPD",
+      "label": "Certified in AI for Business (2026)"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Sales Support / Business Development",
+      "org": "Journal of Pharmascience (family business)",
+      "period": "06/2022 – 03/2025",
+      "note": "Sales, customer follow-up and product communication for pharmaceutical brands."
+    },
+    {
+      "role": "Lab Technician",
+      "org": "University of Petra",
+      "period": "05/2022 – 08/2022",
+      "note": "Laboratory support with a focus on accuracy and safety."
+    },
+    {
+      "role": "Trainee Pharmacist",
+      "org": "Zara Pharmacy",
+      "period": "04/2022 – 08/2022",
+      "note": "Dispensing, pharmacy workflow and patient communication."
+    },
+    {
+      "role": "Vaccination Volunteer",
+      "org": "Ministry of Health COVID-19 Center",
+      "period": "05/2021 – 11/2021",
+      "note": "Patient-facing support in a vaccination center."
+    },
+    {
+      "role": "Beauty Advisor",
+      "org": "Abu Sheikha Drug Store",
+      "period": "07/2020 – 09/2020",
+      "note": "Cosmetic and personal-care product advice."
+    },
+    {
+      "role": "Trainee Pharmacist",
+      "org": "Pharmacy One",
+      "period": "06/2019 – 09/2019",
+      "note": "Community pharmacy operations and customer service."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AI for Business to Increase Productivity",
+      "issuer": "Relevancy Academy (CPD-accredited)",
+      "date": "11/2026",
+      "featured": true,
+      "hours": "15",
+      "period": "15–26 Nov 2026",
+      "number": "AINOVJ0453"
+    },
+    {
+      "name": "Regulatory Landscape and Drug Lifecycle",
+      "issuer": "TrainUnity",
+      "date": "05/2026"
+    },
+    {
+      "name": "Product Classification",
+      "issuer": "TrainUnity",
+      "date": ""
+    },
+    {
+      "name": "Vitamins and Minerals",
+      "issuer": "Jordan Pharmacists Syndicate",
+      "date": "09/2021"
+    },
+    {
+      "name": "Medical Injection & Venipuncture",
+      "issuer": "Esraa Hospital",
+      "date": "03/2021"
+    },
+    {
+      "name": "Cosmetics Workshop",
+      "issuer": "Jordan Pharmacists Syndicate",
+      "date": "10/2019"
+    },
+    {
+      "name": "New Pharmaceutical Care Concept for Diabetic Patients",
+      "issuer": "Jordan Pharmacists Syndicate",
+      "date": "03/2019"
+    },
+    {
+      "name": "Modern Techniques for Skin Care",
+      "issuer": "Jordan Pharmacists Syndicate",
+      "date": "12/2018"
+    },
+    {
+      "name": "Physiognomy and Body Language",
+      "issuer": "University of Petra",
+      "date": "04/2019"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Proficient (C2)"
+    },
+    {
+      "name": "Turkish",
+      "level": "Upper intermediate (B2)"
+    },
+    {
+      "name": "German",
+      "level": "Elementary (A2)"
+    }
+  ],
+  "create": [
+    {
+      "k": "web",
+      "t": "Websites & landing pages",
+      "d": "Designed and built with AI — from concept and copy to a responsive, SEO-ready site."
+    },
+    {
+      "k": "video",
+      "t": "Videos & motion",
+      "d": "AI-assisted scripts, visuals, voice and editing for explainer, product and social videos."
+    },
+    {
+      "k": "game",
+      "t": "Games & interactive experiences",
+      "d": "Playful learning and engagement experiences — quizzes, simulations and simple browser games."
+    },
+    {
+      "k": "campaign",
+      "t": "Marketing campaigns",
+      "d": "Campaign ideas, copy, visuals and content calendars, produced end to end with AI."
+    },
+    {
+      "k": "content",
+      "t": "Content, documents & presentations",
+      "d": "Articles, product material, reports and slide decks — accurate, on-brand and fast."
+    },
+    {
+      "k": "tools",
+      "t": "AI tools & agents",
+      "d": "Small working tools and AI agents that automate repetitive pharmaceutical tasks."
+    }
+  ],
+  "publish": {
+    "fields": false
+  }
+}

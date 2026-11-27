@@ -1,0 +1,69 @@
+{
+  "slug": "regulatory-intelligence-tracker",
+  "field": "regulatory",
+  "order": 32,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "llm",
+    "rag",
+    "agent"
+  ],
+  "references": [
+    {
+      "title": "Jordan Food and Drug Administration (JFDA)",
+      "url": "https://www.jfda.jo/"
+    },
+    {
+      "title": "FDA — Search for FDA guidance documents",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents"
+    },
+    {
+      "title": "European Medicines Agency (EMA)",
+      "url": "https://www.ema.europa.eu/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Regulatory Intelligence & Variation Tracker",
+  "area": "Regulatory intelligence & variations",
+  "short": "Monitors new guidelines and requirements across target markets, summarizes what changed and tracks which products and submissions are affected.",
+  "symptom": "New regulations are discovered too late",
+  "ingredient": "A regulatory watch and impact tracker",
+  "directions": "Choose the authorities and product portfolio to follow. Get a weekly digest of changes with the affected products and submissions.",
+  "problem": "Regulatory teams follow many authorities, each publishing guidelines, labeling updates and procedural changes; tracking variations and country-specific requirements is manual and spread across emails and spreadsheets.",
+  "why": "A missed requirement can cause rejected submissions, non-compliant labels or delayed variations.",
+  "solution": "Collects updates from selected authority websites, summarizes the change in plain language with a link to the source, maps it to affected products, and keeps a tracker of submissions, variations and deadlines.",
+  "architecture": [
+    "Authority websites & bulletins",
+    "Change detection",
+    "Source-linked summaries",
+    "Product impact mapping",
+    "Regulatory team review"
+  ],
+  "data": [
+    "Public authority publications",
+    "Product portfolio and registration status per country",
+    "Submission and variation history"
+  ],
+  "technology": [
+    "Web monitoring",
+    "Language-model summarization with citations",
+    "Submission tracker"
+  ],
+  "impact": [
+    "Earlier awareness of new requirements",
+    "Fewer missed deadlines",
+    "One view of submissions across countries"
+  ],
+  "limitations": [
+    "Summaries can miss nuance; the official text always prevails",
+    "Some authorities publish in formats that are hard to monitor"
+  ],
+  "review": [
+    "Regulatory specialists interpret every change and decide the action plan."
+  ],
+  "published": false
+}

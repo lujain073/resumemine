@@ -1,0 +1,59 @@
+{
+  "slug": "stability-trend-watch",
+  "field": "quality",
+  "order": 22,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "ICH quality guidelines (Q1A stability testing)",
+      "url": "https://www.ich.org/page/quality-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Stability & OOT Trend Watch",
+  "area": "Stability, OOT & OOS analysis",
+  "short": "Watches stability and QC results to flag out-of-trend values before they become out-of-specification.",
+  "symptom": "Out-of-spec results are found too late",
+  "ingredient": "An early-warning layer for QC data",
+  "directions": "Connect stability and release results. Get out-of-trend flags and projected shelf-life curves for the analyst to review.",
+  "problem": "Stability and QC results are often reviewed point by point, so slow drifts are noticed only when a result fails specification.",
+  "why": "A late out-of-specification result can mean recalls, shortened shelf life and costly investigations.",
+  "solution": "Fits trend models to each product, test and storage condition, flags out-of-trend points early, and projects when a parameter may cross its limit.",
+  "technology": [
+    "Statistical trend models",
+    "Shelf-life projection",
+    "Alert rules"
+  ],
+  "impact": [
+    "Earlier warnings",
+    "Fewer OOS investigations",
+    "Data-backed shelf-life decisions"
+  ],
+  "architecture": [
+    "Stability & QC results",
+    "Trend model per test",
+    "Out-of-trend detection",
+    "Shelf-life projection",
+    "Analyst review"
+  ],
+  "limitations": [
+    "Needs enough time points per batch",
+    "Supports, never replaces, the official OOS procedure"
+  ],
+  "techTags": [
+    "stats",
+    "ml"
+  ],
+  "data": [
+    "Stability results per batch, test, time point and storage condition",
+    "Specifications and historical OOS/OOT records"
+  ],
+  "review": [
+    "A QC analyst reviews every flag; OOS results follow the official investigation procedure."
+  ],
+  "published": false
+}

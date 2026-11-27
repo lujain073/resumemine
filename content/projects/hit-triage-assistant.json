@@ -1,0 +1,64 @@
+{
+  "slug": "hit-triage-assistant",
+  "field": "rd",
+  "order": 3,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "rag"
+  ],
+  "references": [
+    {
+      "title": "Jumper et al. (2021) Highly accurate protein structure prediction with AlphaFold. Nature 596",
+      "url": "https://www.nature.com/articles/s41586-021-03819-2"
+    },
+    {
+      "title": "ChEMBL — bioactivity database (EMBL-EBI)",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Discovery Hit Triage Assistant",
+  "area": "Drug discovery & design",
+  "short": "Ranks screening hits by potency, selectivity, ADMET flags and prior evidence so chemists focus on the most promising series.",
+  "symptom": "Too many screening hits, too little time to judge them",
+  "ingredient": "A triage assistant for medicinal chemists",
+  "directions": "Upload the hit list with assay results. Get a ranked shortlist with liability flags and linked prior evidence for the project team.",
+  "problem": "A screening campaign produces hundreds of hits; deciding which to pursue means cross-checking assay data, structural alerts, predicted ADMET properties and published activity by hand.",
+  "why": "Choosing the wrong series wastes months of chemistry and assay resources before the problem becomes clear.",
+  "solution": "Combines assay results with predicted ADMET and toxicity alerts and with known activity from public bioactivity databases, then ranks hits and explains each score so chemists can challenge it.",
+  "architecture": [
+    "Hit list + assay data",
+    "Structure standardization",
+    "ADMET & alert prediction",
+    "Evidence lookup",
+    "Ranked shortlist for the team"
+  ],
+  "data": [
+    "Hit structures (SMILES) and assay results",
+    "Public bioactivity data (e.g. ChEMBL)",
+    "In-house ADMET results if available"
+  ],
+  "technology": [
+    "Cheminformatics descriptors",
+    "Machine-learning property prediction",
+    "Literature and database retrieval"
+  ],
+  "impact": [
+    "Faster hit-to-lead decisions",
+    "Earlier detection of liabilities",
+    "Transparent, explainable ranking"
+  ],
+  "limitations": [
+    "Predicted ADMET values are estimates with known error ranges",
+    "Models trained on public data may not fit novel chemistry"
+  ],
+  "review": [
+    "Medicinal chemists and biologists decide which series advance; scores only support discussion."
+  ],
+  "published": false
+}

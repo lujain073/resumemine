@@ -1,0 +1,63 @@
+{
+  "slug": "trial-eligibility-screener",
+  "field": "rd",
+  "order": 2,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "ClinicalTrials.gov — trial eligibility criteria",
+      "url": "https://clinicaltrials.gov/"
+    },
+    {
+      "title": "ICH efficacy guidelines (E6 Good Clinical Practice)",
+      "url": "https://www.ich.org/page/efficacy-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Clinical Trial Eligibility Screener",
+  "area": "Clinical Research",
+  "short": "Turns complex inclusion and exclusion criteria into a checklist and flags patients who may qualify.",
+  "symptom": "Clinical trials struggle to find eligible patients",
+  "ingredient": "An eligibility checker for trial teams",
+  "directions": "Load the protocol criteria. Each candidate is checked criterion by criterion, with every “maybe” sent to the investigator.",
+  "problem": "Eligibility criteria are long and written in free text, so screening patients is slow and error-prone.",
+  "why": "Slow recruitment is a leading reason trials run late or fail to finish.",
+  "solution": "Converts protocol criteria into structured rules, checks de-identified patient data against each one, and lists matches, exclusions and unknowns for the investigator to confirm.",
+  "technology": [
+    "Criteria parsing with a language model",
+    "Rule matching",
+    "De-identified data handling"
+  ],
+  "impact": [
+    "Faster screening",
+    "Fewer screen failures",
+    "Clear audit of every decision"
+  ],
+  "architecture": [
+    "Protocol criteria",
+    "Structured rules",
+    "De-identified patient data",
+    "Match / exclude / unknown",
+    "Investigator decision"
+  ],
+  "limitations": [
+    "Needs ethics approval and de-identified data",
+    "Final eligibility is always the investigator’s decision"
+  ],
+  "techTags": [
+    "llm",
+    "rules"
+  ],
+  "data": [
+    "Protocol inclusion and exclusion criteria",
+    "De-identified patient records (diagnoses, labs, medications)"
+  ],
+  "review": [
+    "The investigator confirms eligibility for every candidate; the tool only pre-screens."
+  ],
+  "published": false
+}

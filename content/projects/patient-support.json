@@ -1,0 +1,60 @@
+{
+  "slug": "patient-support",
+  "order": 72,
+  "title": "Patient Support & Adherence",
+  "area": "Patient Support",
+  "short": "Personalized medication education and follow-up that continues after the patient leaves.",
+  "phase": 2,
+  "status": "Conceptual",
+  "problem": "Counseling is short and patients forget most of it.",
+  "why": "Poor adherence undermines diabetes, hypertension and asthma care.",
+  "solution": "Turns counseling points into simple Arabic or English messages, reminders and check-ins that escalate concerns.",
+  "technology": [
+    "Language model",
+    "Messaging",
+    "Escalation rules"
+  ],
+  "impact": [
+    "Better understanding",
+    "Earlier side-effect alerts",
+    "Stronger trust"
+  ],
+  "architecture": [
+    "Counseling points",
+    "Personalized content",
+    "Reminders & check-ins",
+    "Escalation rules",
+    "Pharmacist follow-up"
+  ],
+  "limitations": [
+    "Requires patient consent",
+    "Content reviewed by a pharmacist"
+  ],
+  "references": [
+    {
+      "title": "WHO — Adherence to long-term therapies: evidence for action",
+      "url": "https://iris.who.int/handle/10665/42682"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "symptom": "Patients forget how to take their medicine",
+  "ingredient": "Personal follow-up after the counter",
+  "directions": "Starts after counseling. Sends simple reminders and check-ins; escalates side effects to the pharmacist.",
+  "field": "community",
+  "techTags": [
+    "llm",
+    "agent"
+  ],
+  "data": [
+    "Counseling points per medicine",
+    "Patient consent and contact preferences",
+    "Escalation rules"
+  ],
+  "review": [
+    "A pharmacist reviews education content and handles every escalation."
+  ],
+  "published": false
+}

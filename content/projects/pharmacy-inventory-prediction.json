@@ -1,0 +1,74 @@
+{
+  "slug": "pharmacy-inventory-prediction",
+  "order": 71,
+  "title": "Pharmacy Inventory Agent",
+  "area": "Pharmacy Inventory",
+  "short": "A working AI inventory agent: stockout alerts, batch-level expiry risk, losses at cost and a daily PDF report for the pharmacist.",
+  "phase": 3,
+  "status": "Working prototype",
+  "problem": "Stock-outs of essential medicines next to money lost on expired products, with ordering based on habit rather than data.",
+  "why": "An empty shelf is a patient leaving without their medicine; expired stock is lost money.",
+  "solution": "An agent that calculates days of cover, flags stock that will run out before the supplier can deliver, simulates First-Expired-First-Out sell-through for every batch, values risk at purchase cost and writes a 7-section PDF report with a prioritized action plan.",
+  "technology": [
+    "Rule-based inventory analytics",
+    "Safety stock & reorder point",
+    "FEFO expiry simulation",
+    "In-browser PDF reporting",
+    "CSV & Excel input"
+  ],
+  "impact": [
+    "Earlier stockout warnings",
+    "Fewer expired-stock losses",
+    "Reorders backed by visible maths"
+  ],
+  "architecture": [
+    "Inventory + sales files",
+    "Data checks & missing fields",
+    "Stock, expiry & sales analysis",
+    "Alerts & financial risk",
+    "PDF report & action plan"
+  ],
+  "limitations": [
+    "Tested only on fictional sample data so far; real pharmacy data is the next step",
+    "Runs when opened: nightly 11 PM delivery and instant alerts need a connection to the pharmacy system",
+    "Seasonality needs at least one year of sales history",
+    "Recommends only: never orders, edits records or disposes of stock"
+  ],
+  "references": [
+    {
+      "title": "Forecasting: Principles and Practice (open textbook)",
+      "url": "https://otexts.com/fpp3/"
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "img/uploads/inventory-agent-dashboard.webp",
+      "caption": "Dashboard on the fictional sample pharmacy: summary, alerts and inventory"
+    },
+    {
+      "image": "img/uploads/inventory-agent-report.webp",
+      "caption": "Generated PDF report: executive summary and stockout predictions"
+    }
+  ],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "symptom": "The shelf is empty — or full of expired stock",
+  "ingredient": "An inventory agent that reads your stock file",
+  "directions": "Upload the inventory and sales files. Get alerts, reorder quantities with the maths shown, expiry risk per batch and a PDF report.",
+  "demo": "inventory-agent/index.html",
+  "field": "community",
+  "techTags": [
+    "stats",
+    "rules"
+  ],
+  "data": [
+    "Inventory per batch: drug, quantity, expiry, batch number",
+    "Sales history (date, drug, quantity)",
+    "Purchase price, supplier, lead time, min/max levels"
+  ],
+  "review": [
+    "The pharmacist approves every order, stock change and disposal; the agent never acts on its own."
+  ],
+  "published": false
+}

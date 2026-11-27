@@ -1,0 +1,56 @@
+{
+  "slug": "market-intelligence-dashboard",
+  "field": "commercial",
+  "order": 53,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "llm",
+    "rag",
+    "ml"
+  ],
+  "references": [],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Market Intelligence Dashboard",
+  "area": "Market intelligence & competitor analysis",
+  "short": "Brings together market data, competitor launches, tenders and news into one dashboard with plain-language weekly insights.",
+  "symptom": "Market and competitor information is scattered everywhere",
+  "ingredient": "A market radar for brand and business teams",
+  "directions": "Connect your sales data and choose competitors and therapeutic areas. Get a dashboard and a weekly summary of what changed and why it matters.",
+  "problem": "Brand and business development teams collect market share, competitor registrations, price changes, tenders and news from many sources, usually in slides that are outdated quickly.",
+  "why": "Late awareness of a competitor launch or tender result costs market share and weakens planning.",
+  "solution": "Aggregates internal sales, licensed market data and public sources (registrations, tenders, news), detects meaningful changes, and writes a short, sourced weekly briefing per therapeutic area.",
+  "architecture": [
+    "Internal sales & licensed market data",
+    "Public sources (registrations, tenders, news)",
+    "Change detection",
+    "Dashboard & sourced briefing",
+    "Brand team decisions"
+  ],
+  "data": [
+    "Own sales by product and region",
+    "Licensed market data where available",
+    "Public registration, tender and news sources"
+  ],
+  "technology": [
+    "Data integration and dashboards",
+    "Language-model summarization with sources",
+    "Trend detection"
+  ],
+  "impact": [
+    "Earlier competitive awareness",
+    "Less time building reports",
+    "Shared view across teams"
+  ],
+  "limitations": [
+    "Licensed market data has its own coverage gaps",
+    "Must avoid sharing confidential competitor information obtained improperly"
+  ],
+  "review": [
+    "Brand and business teams interpret insights and decide strategy."
+  ],
+  "published": false
+}

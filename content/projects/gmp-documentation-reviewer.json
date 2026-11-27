@@ -1,0 +1,64 @@
+{
+  "slug": "gmp-documentation-reviewer",
+  "field": "quality",
+  "order": 23,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "llm",
+    "rules"
+  ],
+  "references": [
+    {
+      "title": "EudraLex Volume 4 — EU GMP guidelines (incl. Annex 11, computerised systems)",
+      "url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en"
+    },
+    {
+      "title": "21 CFR Part 11 — electronic records and signatures",
+      "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI GMP Documentation Reviewer",
+  "area": "GMP documentation review",
+  "short": "Pre-reviews batch records, SOPs and logbooks for missing entries, calculation errors and good documentation practice issues.",
+  "symptom": "Batch record review delays every release",
+  "ingredient": "A pre-reviewer for GMP documents",
+  "directions": "Upload the executed batch record or SOP draft. QA receives a list of gaps and inconsistencies to check, page by page.",
+  "problem": "QA reviewers read hundreds of pages per batch to find missing signatures, blank fields, out-of-range values, calculation errors and undocumented corrections.",
+  "why": "Review backlogs delay batch release, and missed documentation errors become inspection findings.",
+  "solution": "Extracts entries from executed records, checks them against the master record and limits, recalculates yields and reconciliations, and flags good documentation practice issues for the reviewer.",
+  "architecture": [
+    "Executed record (scan or electronic)",
+    "Text and field extraction",
+    "Checks vs master record & limits",
+    "Issue list by page",
+    "QA reviewer decision"
+  ],
+  "data": [
+    "Executed batch records or logbooks",
+    "Master batch records and specifications",
+    "Good documentation practice rules"
+  ],
+  "technology": [
+    "Document AI (OCR, field extraction)",
+    "Rule checks and recalculation",
+    "Language model for SOP consistency"
+  ],
+  "impact": [
+    "Faster batch release",
+    "More consistent reviews",
+    "Fewer documentation findings"
+  ],
+  "limitations": [
+    "Handwriting and scan quality limit extraction",
+    "Requires computerised-system validation and data-integrity controls"
+  ],
+  "review": [
+    "QA performs the official review and release; the tool’s list is an aid, not a record of review."
+  ],
+  "published": false
+}

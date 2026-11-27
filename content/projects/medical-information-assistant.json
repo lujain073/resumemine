@@ -1,0 +1,55 @@
+{
+  "slug": "medical-information-assistant",
+  "field": "commercial",
+  "order": 52,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Medical Information Assistant",
+  "area": "Medical Information",
+  "short": "Drafts accurate answers to healthcare professionals’ product questions from approved sources only.",
+  "symptom": "Doctors wait days for product answers",
+  "ingredient": "A source-grounded answer drafter",
+  "directions": "Paste the inquiry. Get a draft answer built only from approved documents, with citations, for the medical information pharmacist to approve.",
+  "problem": "Medical information teams answer many similar questions about dosing, stability, interactions and use in special populations, often searching the same documents again and again.",
+  "why": "Slow or inconsistent answers frustrate prescribers and can affect patient care.",
+  "solution": "Retrieves passages from approved documents, drafts a balanced answer with citations, and logs the inquiry; adverse events mentioned in an inquiry are routed to pharmacovigilance.",
+  "technology": [
+    "Retrieval from approved documents",
+    "Cited answer drafting",
+    "Adverse-event detection"
+  ],
+  "impact": [
+    "Faster responses",
+    "Consistent answers",
+    "No missed adverse-event reports"
+  ],
+  "architecture": [
+    "HCP inquiry",
+    "Search approved documents",
+    "Cited draft answer",
+    "Adverse-event check",
+    "Pharmacist approval"
+  ],
+  "limitations": [
+    "Answers only from approved sources; otherwise says it cannot answer",
+    "Every answer is approved by a pharmacist before sending"
+  ],
+  "techTags": [
+    "llm",
+    "rag"
+  ],
+  "data": [
+    "Approved product documents and standard response letters",
+    "Inquiry log",
+    "Pharmacovigilance reporting rules"
+  ],
+  "review": [
+    "A medical information pharmacist approves every answer before it is sent."
+  ],
+  "published": false
+}

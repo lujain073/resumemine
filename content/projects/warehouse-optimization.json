@@ -1,0 +1,55 @@
+{
+  "slug": "warehouse-optimization",
+  "field": "supply",
+  "order": 44,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "opt",
+    "ml"
+  ],
+  "references": [],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Pharmaceutical Warehouse Optimization System",
+  "area": "Warehouse & distribution",
+  "short": "Improves slotting, picking routes and FEFO compliance in pharmaceutical warehouses, and plans delivery routes.",
+  "symptom": "Picking is slow and FEFO is not always followed",
+  "ingredient": "A layout and route optimizer for warehouses",
+  "directions": "Connect warehouse stock, locations and order history. Get slotting suggestions, optimized pick paths and delivery route plans.",
+  "problem": "Fast-moving items are often stored far from dispatch, pickers walk long routes, FEFO is broken under pressure, and delivery routes are planned manually.",
+  "why": "Inefficient warehouses delay deliveries, increase picking errors and leave short-dated stock unsold.",
+  "solution": "Analyzes order patterns to place fast movers near dispatch within storage-condition zones, generates pick paths that enforce FEFO, and optimizes delivery routes with time windows and cold-chain constraints.",
+  "architecture": [
+    "Stock, locations & orders",
+    "Demand & velocity analysis",
+    "Slotting and pick-path optimization",
+    "Route planning",
+    "Warehouse manager approval"
+  ],
+  "data": [
+    "Warehouse locations and storage zones",
+    "Order lines and stock movements",
+    "Customer locations and delivery windows"
+  ],
+  "technology": [
+    "Optimization (slotting, vehicle routing)",
+    "Demand velocity analysis",
+    "Warehouse system integration"
+  ],
+  "impact": [
+    "Faster picking",
+    "Better FEFO compliance",
+    "Shorter delivery routes"
+  ],
+  "limitations": [
+    "Storage conditions and segregation rules (e.g. controlled drugs) always take priority",
+    "Requires accurate location data"
+  ],
+  "review": [
+    "The warehouse manager approves layout changes; GDP requirements are never overridden."
+  ],
+  "published": false
+}

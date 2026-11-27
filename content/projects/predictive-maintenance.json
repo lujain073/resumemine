@@ -1,0 +1,60 @@
+{
+  "slug": "predictive-maintenance",
+  "field": "manufacturing",
+  "order": 12,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "stats"
+  ],
+  "references": [
+    {
+      "title": "FDA CDER — Artificial Intelligence in Drug Manufacturing, discussion paper (2023)",
+      "url": "https://www.fda.gov/media/165743/download"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Predictive Maintenance for Pharmaceutical Equipment",
+  "area": "Equipment & engineering",
+  "short": "Uses sensor and maintenance history to predict equipment failures before they stop a batch.",
+  "symptom": "Machines fail in the middle of a batch",
+  "ingredient": "A failure early-warning for critical equipment",
+  "directions": "Connect equipment sensor data and maintenance logs. Engineering receives risk scores and suggested inspection windows.",
+  "problem": "Tablet presses, coaters, filling lines and HVAC units are maintained on fixed schedules; unexpected failures still interrupt batches and trigger deviations.",
+  "why": "An unplanned stop can mean a rejected batch, an investigation, lost capacity and supply delays.",
+  "solution": "Learns normal operating patterns from vibration, temperature, pressure and current signals, detects drift toward failure and suggests when to inspect — fitting maintenance into planned downtime.",
+  "architecture": [
+    "Equipment sensors & logs",
+    "Signal cleaning",
+    "Anomaly & failure-risk model",
+    "Maintenance recommendations",
+    "Engineering decision"
+  ],
+  "data": [
+    "Sensor time series (vibration, temperature, pressure, power)",
+    "Maintenance and failure history",
+    "Batch and equipment usage records"
+  ],
+  "technology": [
+    "Time-series anomaly detection",
+    "Survival / failure-risk models",
+    "Condition monitoring"
+  ],
+  "impact": [
+    "Fewer unplanned stops",
+    "Fewer equipment-related deviations",
+    "Longer equipment life"
+  ],
+  "limitations": [
+    "Needs months of sensor data including some failures",
+    "Changes to qualified equipment follow change control"
+  ],
+  "review": [
+    "Maintenance engineers decide on every intervention; qualified-state changes go through change control."
+  ],
+  "published": false
+}

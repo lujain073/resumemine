@@ -1,0 +1,1101 @@
+# Admin panel (Decap CMS). Open https://your-domain.com/admin/
+# Every save commits to GitHub; Netlify rebuilds the site in about a minute.
+# English content: content/*  ·  Arabic content: content/ar/*
+backend:
+  name: git-gateway
+  branch: main
+local_backend: true
+media_folder: static/img/uploads
+public_folder: img/uploads
+site_url: https://your-domain.com
+display_url: https://your-domain.com
+logo_url: /favicon.svg
+collections:
+- name: settings
+  label: Site settings (English)
+  editor:
+    preview: false
+  files:
+  - name: site
+    label: Profile, pages & SEO
+    file: content/site.json
+    format: json
+    fields:
+    - name: publish
+      label: Publish sections (turn ON, then press Publish at the top)
+      widget: object
+      fields:
+      - name: fields
+        label: Show the 9 pharmaceutical fields (Field guide page, map and menu link)
+        widget: boolean
+        default: false
+        required: false
+    - name: siteUrl
+      label: Website address (no slash at the end)
+      widget: string
+    - name: name
+      label: Short name
+      widget: string
+    - name: fullName
+      label: Full name (shown in header, titles & Google)
+      widget: string
+    - name: arabicName
+      label: Name in Arabic
+      widget: string
+    - name: role
+      label: Professional title
+      widget: string
+    - name: positioning
+      label: Positioning line
+      widget: string
+    - name: location
+      label: Location
+      widget: string
+    - name: brandConcept
+      label: Brand concept
+      widget: string
+    - name: tagline
+      label: Main tagline
+      widget: string
+    - name: theme
+      label: Brand colours (hex codes)
+      widget: object
+      fields:
+      - name: navy
+        label: Main dark colour
+        widget: string
+      - name: teal
+        label: Accent colour
+        widget: string
+      - name: sand
+        label: Warm colour
+        widget: string
+    - name: seo
+      label: SEO — title & description for each page
+      widget: object
+      collapsed: true
+      fields:
+      - name: home
+        label: Home
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: about
+        label: About
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: projects
+        label: Pipeline / Projects
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: research
+        label: Research
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: skills
+        label: Skills
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: marketing
+        label: AI Marketing
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: contact
+        label: Contact
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: fields
+        label: Field guide
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: faq
+        label: FAQ
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+    - name: hero
+      label: Home — hero
+      widget: object
+      fields:
+      - name: headline
+        label: Headline
+        widget: string
+      - name: subheadline
+        label: Subheadline
+        widget: text
+      - name: intro
+        label: Short introduction
+        widget: text
+      - name: primaryCta
+        label: Main button text
+        widget: string
+      - name: secondaryCta
+        label: Second button text
+        widget: string
+    - name: about
+      label: About page
+      widget: object
+      fields:
+      - name: lead
+        label: Opening sentence
+        widget: text
+      - name: body
+        label: Body (blank line = new paragraph)
+        widget: text
+      - name: education
+        label: Education
+        widget: list
+        fields:
+        - name: degree
+          label: Degree
+          widget: string
+        - name: institution
+          label: University
+          widget: string
+          required: false
+        - name: year
+          label: Year (or 'Planned')
+          widget: string
+        - name: note
+          label: Note
+          widget: string
+          required: false
+      - name: interests
+        label: Professional interests
+        widget: list
+      - name: expertise
+        label: Areas of expertise
+        widget: list
+      - name: development
+        label: Professional development
+        widget: list
+    - name: highlights
+      label: Home — highlight numbers
+      widget: list
+      fields:
+      - name: value
+        label: Number (e.g. 3.8)
+        widget: string
+      - name: label
+        label: Label
+        widget: string
+    - name: experience
+      label: Experience
+      widget: list
+      fields:
+      - name: role
+        label: Role
+        widget: string
+      - name: org
+        label: Organization
+        widget: string
+      - name: period
+        label: Period (e.g. 06/2022 – 03/2025)
+        widget: string
+      - name: note
+        label: One-line description
+        widget: string
+        required: false
+    - name: certifications
+      label: Certifications & courses
+      widget: list
+      fields:
+      - name: name
+        label: Name
+        widget: string
+      - name: issuer
+        label: Issued by
+        widget: string
+      - name: date
+        label: Date
+        widget: string
+        required: false
+      - name: featured
+        label: Featured (shown as the main certificate)
+        widget: boolean
+        required: false
+        default: false
+      - name: hours
+        label: Training hours
+        widget: string
+        required: false
+      - name: period
+        label: Training period
+        widget: string
+        required: false
+      - name: number
+        label: Certificate number
+        widget: string
+        required: false
+    - name: languages
+      label: Languages
+      widget: list
+      fields:
+      - name: name
+        label: Language
+        widget: string
+      - name: level
+        label: Level
+        widget: string
+    - name: create
+      label: What I create with AI
+      widget: list
+      fields:
+      - name: k
+        label: Icon
+        widget: select
+        options:
+        - web
+        - video
+        - game
+        - campaign
+        - content
+        - tools
+      - name: t
+        label: Title
+        widget: string
+      - name: d
+        label: Description
+        widget: text
+    - name: skills
+      label: Skills
+      widget: list
+      fields:
+      - name: category
+        label: Category
+        widget: string
+      - name: items
+        label: Skills
+        widget: list
+        fields:
+        - name: name
+          label: Skill
+          widget: string
+        - name: level
+          label: Level (1 Learning · 2 Developing · 3 Proficient)
+          widget: number
+          value_type: int
+          min: 1
+          max: 3
+    - name: contact
+      label: Contact
+      widget: object
+      fields:
+      - name: email
+        label: Professional email
+        widget: string
+      - name: linkedin
+        label: LinkedIn URL (leave empty to hide)
+        widget: string
+        required: false
+      - name: intro
+        label: Contact introduction
+        widget: text
+      - name: roles
+        label: Roles I am open to
+        widget: list
+- name: projects
+  label: Projects (English)
+  label_singular: Project
+  folder: content/projects
+  create: true
+  extension: json
+  format: json
+  slug: '{{slug}}'
+  identifier_field: title
+  summary: '{{order}}. {{title}} — {{status}} — on website: {{published}}'
+  sortable_fields:
+  - order
+  - title
+  - published
+  fields:
+  - name: published
+    label: Show on website (turn ON, then press Publish at the top)
+    widget: boolean
+    default: false
+    required: false
+    hint: OFF = hidden draft, visible only here in the admin panel. ON = the project, its page and its prototype (if any) appear on the website after you press Publish.
+  - &id001
+    name: title
+    label: Project title
+    widget: string
+  - name: slug
+    label: URL name (lowercase-with-hyphens)
+    widget: string
+  - name: order
+    label: Display order
+    widget: number
+    value_type: int
+  - name: field
+    label: Field of pharmacy
+    widget: select
+    options:
+    - label: 1 Research & development
+      value: rd
+    - label: 2 Manufacturing & engineering
+      value: manufacturing
+    - label: 3 Quality assurance & quality control
+      value: quality
+    - label: 4 Regulatory affairs
+      value: regulatory
+    - label: 5 Supply chain, procurement & distribution
+      value: supply
+    - label: 6 Medical affairs, marketing & sales
+      value: commercial
+    - label: 7 Hospital & clinical pharmacy
+      value: hospital
+    - label: 8 Community pharmacy & patient care
+      value: community
+    - label: 9 Pharmacovigilance & drug safety
+      value: safety
+  - &id002
+    name: area
+    label: Area
+    widget: string
+  - &id003
+    name: short
+    label: One-line summary
+    widget: text
+  - name: status
+    label: Status
+    widget: select
+    options:
+    - Conceptual
+    - Working prototype
+    - Working product
+  - name: phase
+    label: Pipeline phase
+    widget: select
+    options:
+    - label: 1 Problem discovery
+      value: 1
+    - label: 2 Concept design
+      value: 2
+    - label: 3 Prototype
+      value: 3
+    - label: 4 Validation
+      value: 4
+    - label: 5 Deployment
+      value: 5
+  - &id004
+    name: symptom
+    label: 'Counter: the symptom (short, how a pharmacist would say it)'
+    widget: string
+  - &id005
+    name: ingredient
+    label: 'Counter: what is dispensed (the AI solution in one line)'
+    widget: string
+  - &id006
+    name: directions
+    label: 'Counter: directions (one or two short sentences)'
+    widget: text
+  - &id007
+    name: problem
+    label: Problem
+    widget: text
+  - &id008
+    name: why
+    label: Why it matters
+    widget: text
+  - &id009
+    name: solution
+    label: Proposed AI solution
+    widget: text
+  - &id010
+    name: technology
+    label: Technology involved
+    widget: list
+  - name: techTags
+    label: Technology filters
+    widget: select
+    multiple: true
+    options:
+    - label: Language models
+      value: llm
+    - label: Retrieval from approved sources
+      value: rag
+    - label: Machine learning
+      value: ml
+    - label: Statistics & forecasting
+      value: stats
+    - label: Optimization
+      value: opt
+    - label: Computer vision
+      value: cv
+    - label: Rules engines
+      value: rules
+    - label: AI agents
+      value: agent
+  - &id011
+    name: impact
+    label: Expected impact
+    widget: list
+  - &id012
+    name: architecture
+    label: How the system works (3–6 steps, in order)
+    widget: list
+  - name: data
+    label: Required data
+    widget: list
+  - &id013
+    name: limitations
+    label: Limitations & risks
+    widget: list
+  - name: review
+    label: Human review & approval
+    widget: list
+  - name: references
+    label: Research references
+    widget: list
+    required: false
+    fields:
+    - name: title
+      label: Title
+      widget: string
+    - name: url
+      label: Link
+      widget: string
+  - name: screenshots
+    label: Screenshots
+    widget: list
+    required: false
+    fields:
+    - name: image
+      label: Image
+      widget: image
+    - name: caption
+      label: Caption
+      widget: string
+      required: false
+  - name: demo
+    label: Live prototype link (e.g. inventory-agent/)
+    widget: string
+    required: false
+  - name: video
+    label: Demo video link (YouTube, Loom…)
+    widget: string
+    required: false
+  - name: seoTitle
+    label: SEO title (leave empty for automatic)
+    widget: string
+    required: false
+  - name: seoDescription
+    label: SEO description (leave empty for automatic)
+    widget: text
+    required: false
+  view_filters:
+  - label: Shown on website
+    field: published
+    pattern: true
+  - label: Hidden drafts
+    field: published
+    pattern: false
+- name: faq
+  label: FAQ (English)
+  editor:
+    preview: false
+  files:
+  - name: faq_en
+    label: Frequently asked questions
+    file: content/faq.json
+    format: json
+    fields:
+    - name: items
+      label: Questions
+      widget: list
+      fields:
+      - name: q
+        label: Question
+        widget: string
+      - name: a
+        label: Answer
+        widget: text
+- name: marketing
+  label: AI Marketing (English)
+  editor:
+    preview: false
+  files:
+  - name: marketing_en
+    label: Audiences, builder, workflow & rules
+    file: content/marketing.json
+    format: json
+    fields:
+    - name: audiences
+      label: Audiences
+      widget: list
+      fields:
+      - {name: k, label: Key (do not change), widget: select, options: [companies, pharmacies, warehouses, individuals, products]}
+      - {name: t, label: Title, widget: string}
+      - {name: who, label: Who exactly, widget: string}
+      - {name: pain, label: Their challenge, widget: text}
+      - {name: make, label: What I make, widget: list}
+      - {name: channels, label: Channels, widget: list}
+      - {name: compliance, label: Compliance note, widget: text}
+    - name: goals
+      label: Campaign goals (builder)
+      widget: list
+      fields:
+      - {name: k, label: Key (do not change), widget: string}
+      - {name: t, label: Title, widget: string}
+      - {name: angle, label: Message angle, widget: string}
+      - {name: kpi, label: How to measure, widget: string}
+    - name: process
+      label: Workflow steps
+      widget: list
+      fields:
+      - {name: t, label: Title, widget: string}
+      - {name: d, label: Description, widget: text}
+    - name: rules
+      label: Compliance rules
+      widget: list
+      fields:
+      - {name: t, label: Title, widget: string}
+      - {name: d, label: Description, widget: text}
+    - name: references
+      label: Sources
+      widget: list
+      fields:
+      - {name: title, label: Title, widget: string}
+      - {name: url, label: URL, widget: string}
+    - {name: note, label: Disclaimer under the rules, widget: text}
+- name: articles
+  label: Articles (English)
+  label_singular: Article
+  folder: content/articles
+  create: true
+  extension: json
+  format: json
+  slug: '{{slug}}'
+  identifier_field: title
+  fields:
+  - name: title
+    label: Title
+    widget: string
+  - name: slug
+    label: URL name (lowercase-with-hyphens)
+    widget: string
+  - name: category
+    label: Topic
+    widget: select
+    options:
+    - Pharmaceutical AI research
+    - Healthcare AI trends
+    - Case studies
+    - Innovation articles
+    - New AI applications in pharmacy
+  - name: date
+    label: Date
+    widget: datetime
+    format: YYYY-MM-DD
+    date_format: YYYY-MM-DD
+    time_format: false
+  - name: excerpt
+    label: Summary (also used as SEO description)
+    widget: text
+  - name: body
+    label: Article
+    widget: markdown
+  - name: sample
+    label: Mark as sample
+    widget: boolean
+    default: false
+    required: false
+- name: settings_ar
+  label: إعدادات الموقع (عربي)
+  editor:
+    preview: false
+  files:
+  - name: site_ar
+    label: الملف الشخصي والصفحات و SEO
+    file: content/ar/site.json
+    format: json
+    fields:
+    - name: fullName
+      label: الاسم بالعربية
+      widget: string
+    - name: altName
+      label: الاسم بالإنجليزية (يظهر تحت الاسم)
+      widget: string
+    - name: role
+      label: Professional title
+      widget: string
+    - name: positioning
+      label: Positioning line
+      widget: string
+    - name: location
+      label: Location
+      widget: string
+    - name: brandConcept
+      label: Brand concept
+      widget: string
+    - name: tagline
+      label: Main tagline
+      widget: string
+    - name: seo
+      label: SEO — title & description for each page
+      widget: object
+      collapsed: true
+      fields:
+      - name: home
+        label: Home
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: about
+        label: About
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: projects
+        label: Pipeline / Projects
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: research
+        label: Research
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: skills
+        label: Skills
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: marketing
+        label: AI Marketing
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: contact
+        label: Contact
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: fields
+        label: دليل المجالات
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+      - name: faq
+        label: FAQ
+        widget: object
+        fields:
+        - name: title
+          label: Meta title (50–60 characters)
+          widget: string
+        - name: description
+          label: Meta description (140–160 characters)
+          widget: text
+    - name: hero
+      label: Home — hero
+      widget: object
+      fields:
+      - name: headline
+        label: Headline
+        widget: string
+      - name: subheadline
+        label: Subheadline
+        widget: text
+      - name: intro
+        label: Short introduction
+        widget: text
+      - name: primaryCta
+        label: Main button text
+        widget: string
+      - name: secondaryCta
+        label: Second button text
+        widget: string
+    - name: about
+      label: About page
+      widget: object
+      fields:
+      - name: lead
+        label: Opening sentence
+        widget: text
+      - name: body
+        label: Body (blank line = new paragraph)
+        widget: text
+      - name: education
+        label: Education
+        widget: list
+        fields:
+        - name: degree
+          label: Degree
+          widget: string
+        - name: institution
+          label: University
+          widget: string
+          required: false
+        - name: year
+          label: Year (or 'Planned')
+          widget: string
+        - name: note
+          label: Note
+          widget: string
+          required: false
+      - name: interests
+        label: Professional interests
+        widget: list
+      - name: expertise
+        label: Areas of expertise
+        widget: list
+      - name: development
+        label: Professional development
+        widget: list
+    - name: highlights
+      label: Home — highlight numbers
+      widget: list
+      fields:
+      - name: value
+        label: Number (e.g. 3.8)
+        widget: string
+      - name: label
+        label: Label
+        widget: string
+    - name: experience
+      label: Experience
+      widget: list
+      fields:
+      - name: role
+        label: Role
+        widget: string
+      - name: org
+        label: Organization
+        widget: string
+      - name: period
+        label: Period (e.g. 06/2022 – 03/2025)
+        widget: string
+      - name: note
+        label: One-line description
+        widget: string
+        required: false
+    - name: certifications
+      label: Certifications & courses
+      widget: list
+      fields:
+      - name: name
+        label: Name
+        widget: string
+      - name: issuer
+        label: Issued by
+        widget: string
+      - name: date
+        label: Date
+        widget: string
+        required: false
+      - name: featured
+        label: Featured (shown as the main certificate)
+        widget: boolean
+        required: false
+        default: false
+      - name: hours
+        label: Training hours
+        widget: string
+        required: false
+      - name: period
+        label: Training period
+        widget: string
+        required: false
+      - name: number
+        label: Certificate number
+        widget: string
+        required: false
+    - name: languages
+      label: Languages
+      widget: list
+      fields:
+      - name: name
+        label: Language
+        widget: string
+      - name: level
+        label: Level
+        widget: string
+    - name: create
+      label: What I create with AI
+      widget: list
+      fields:
+      - name: k
+        label: Icon
+        widget: select
+        options:
+        - web
+        - video
+        - game
+        - campaign
+        - content
+        - tools
+      - name: t
+        label: Title
+        widget: string
+      - name: d
+        label: Description
+        widget: text
+    - name: skills
+      label: Skills
+      widget: list
+      fields:
+      - name: category
+        label: Category
+        widget: string
+      - name: items
+        label: Skills
+        widget: list
+        fields:
+        - name: name
+          label: Skill
+          widget: string
+        - name: level
+          label: Level (1 Learning · 2 Developing · 3 Proficient)
+          widget: number
+          value_type: int
+          min: 1
+          max: 3
+    - name: contact
+      label: Contact
+      widget: object
+      fields:
+      - name: intro
+        label: Contact introduction
+        widget: text
+      - name: roles
+        label: Roles I am open to
+        widget: list
+- name: projects_ar
+  label: المشاريع (عربي)
+  label_singular: ترجمة مشروع
+  folder: content/ar/projects
+  create: true
+  extension: json
+  format: json
+  slug: '{{fields.slug}}'
+  identifier_field: title
+  summary: '{{title}}'
+  fields:
+  - name: slug
+    label: رابط المشروع الإنجليزي (نفس URL name في المشروع الإنجليزي)
+    widget: string
+  - *id001
+  - name: statusLabel
+    label: الحالة بالعربي (اتركيها فارغة إذا كان المشروع مفاهيمياً)
+    widget: string
+    required: false
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - *id008
+  - *id009
+  - *id010
+  - *id011
+  - *id012
+  - name: data
+    label: البيانات المطلوبة
+    widget: list
+  - *id013
+  - name: review
+    label: المراجعة والاعتماد البشري
+    widget: list
+- name: articles_ar
+  label: المقالات (عربي)
+  label_singular: مقال
+  folder: content/ar/articles
+  create: true
+  extension: json
+  format: json
+  slug: '{{fields.slug}}'
+  identifier_field: title
+  fields:
+  - name: title
+    label: Title
+    widget: string
+  - name: slug
+    label: URL name (lowercase-with-hyphens)
+    widget: string
+  - name: category
+    label: Topic
+    widget: select
+    options:
+    - أبحاث الذكاء الاصطناعي الدوائي
+    - توجهات الذكاء الاصطناعي في الرعاية الصحية
+    - دراسات حالة
+    - مقالات ابتكار
+    - تطبيقات جديدة للذكاء الاصطناعي في الصيدلة
+  - name: date
+    label: Date
+    widget: datetime
+    format: YYYY-MM-DD
+    date_format: YYYY-MM-DD
+    time_format: false
+  - name: excerpt
+    label: Summary (also used as SEO description)
+    widget: text
+  - name: body
+    label: Article
+    widget: markdown
+  - name: sample
+    label: Mark as sample
+    widget: boolean
+    default: false
+    required: false
+- name: faq_ar
+  label: الأسئلة الشائعة (عربي)
+  editor:
+    preview: false
+  files:
+  - name: faq_ar
+    label: الأسئلة الشائعة
+    file: content/ar/faq.json
+    format: json
+    fields:
+    - name: items
+      label: Questions
+      widget: list
+      fields:
+      - name: q
+        label: Question
+        widget: string
+      - name: a
+        label: Answer
+        widget: text
+- name: marketing_ar
+  label: التسويق بالذكاء الاصطناعي (عربي)
+  editor:
+    preview: false
+  files:
+  - name: marketing_ar
+    label: الفئات والوصفة وخطوات العمل والقواعد
+    file: content/ar/marketing.json
+    format: json
+    fields:
+    - name: audiences
+      label: الفئات
+      widget: list
+      fields:
+      - {name: k, label: المفتاح (لا تغيّريه), widget: select, options: [companies, pharmacies, warehouses, individuals, products]}
+      - {name: t, label: العنوان, widget: string}
+      - {name: who, label: من بالتحديد, widget: string}
+      - {name: pain, label: التحدي, widget: text}
+      - {name: make, label: ماذا أصنع, widget: list}
+      - {name: channels, label: القنوات, widget: list}
+      - {name: compliance, label: ملاحظة الامتثال, widget: text}
+    - name: goals
+      label: أهداف الحملة (أداة الوصفة)
+      widget: list
+      fields:
+      - {name: k, label: المفتاح (لا تغيّريه), widget: string}
+      - {name: t, label: العنوان, widget: string}
+      - {name: angle, label: زاوية الرسالة, widget: string}
+      - {name: kpi, label: طريقة القياس, widget: string}
+    - name: process
+      label: خطوات العمل
+      widget: list
+      fields:
+      - {name: t, label: العنوان, widget: string}
+      - {name: d, label: الوصف, widget: text}
+    - name: rules
+      label: قواعد الامتثال
+      widget: list
+      fields:
+      - {name: t, label: العنوان, widget: string}
+      - {name: d, label: الوصف, widget: text}
+    - name: references
+      label: المصادر
+      widget: list
+      fields:
+      - {name: title, label: العنوان, widget: string}
+      - {name: url, label: URL, widget: string}
+    - {name: note, label: ملاحظة تحت القواعد, widget: text}

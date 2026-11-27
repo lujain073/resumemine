@@ -1,0 +1,64 @@
+{
+  "slug": "medication-safety",
+  "order": 61,
+  "title": "Medication Safety Copilot",
+  "area": "Medication Safety",
+  "short": "AI-assisted prescription review that flags likely errors before they reach the patient.",
+  "phase": 2,
+  "status": "Conceptual",
+  "problem": "Wrong doses, duplicates and look-alike mix-ups slip past busy pharmacists.",
+  "why": "Medication errors are a leading preventable cause of patient harm.",
+  "solution": "An assistant that reviews each prescription against the patient profile and returns a short, sourced list of concerns.",
+  "technology": [
+    "Rule engine",
+    "Language model",
+    "Drug references"
+  ],
+  "impact": [
+    "Fewer errors",
+    "Less alert fatigue",
+    "Clear audit trail"
+  ],
+  "architecture": [
+    "Prescription + patient profile",
+    "Structured extraction",
+    "Rule & reference checks",
+    "Ranked concerns with sources",
+    "Pharmacist decision"
+  ],
+  "limitations": [
+    "Never auto-approves a prescription",
+    "Needs local formulary data for Jordan"
+  ],
+  "references": [
+    {
+      "title": "WHO — Medication Without Harm (Global Patient Safety Challenge)",
+      "url": "https://www.who.int/initiatives/medication-without-harm"
+    },
+    {
+      "title": "ISMP — Institute for Safe Medication Practices",
+      "url": "https://www.ismp.org/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "symptom": "Errors slip through the prescription queue",
+  "ingredient": "An AI second check on every prescription",
+  "directions": "Runs on each prescription. Flags the risk, cites the source, leaves the decision to the pharmacist.",
+  "field": "hospital",
+  "techTags": [
+    "rules",
+    "llm"
+  ],
+  "data": [
+    "Prescriptions",
+    "Patient profile (age, weight, renal function, allergies)",
+    "Approved dosing references and local formulary"
+  ],
+  "review": [
+    "The pharmacist accepts or dismisses every alert and makes the dispensing decision."
+  ],
+  "published": false
+}

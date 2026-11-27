@@ -1,0 +1,56 @@
+{
+  "slug": "shortage-early-warning",
+  "field": "supply",
+  "order": 41,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Drug Shortage Early Warning",
+  "area": "Supply Chain & Distribution",
+  "short": "Combines demand, supplier and market signals to warn distributors before a medicine runs short.",
+  "symptom": "Shortages are noticed only when orders fail",
+  "ingredient": "An early-warning radar for the supply chain",
+  "directions": "Connect sales, purchase orders and supplier lead times. Get a ranked list of products at risk, with the reason for each.",
+  "problem": "Distributors and hospitals usually learn about a shortage when an order cannot be filled.",
+  "why": "Shortages force therapeutic substitutions, raise costs and can harm patients.",
+  "solution": "Tracks demand growth, supplier delivery delays, single-source products and stock across sites to score each product’s shortage risk and suggest options early.",
+  "technology": [
+    "Risk scoring",
+    "Lead-time monitoring",
+    "Multi-site stock view"
+  ],
+  "impact": [
+    "Earlier warning",
+    "Planned alternatives instead of emergencies",
+    "Lower emergency purchase costs"
+  ],
+  "architecture": [
+    "Sales & orders",
+    "Supplier delays",
+    "Risk score per product",
+    "Ranked watch list",
+    "Supply planner action"
+  ],
+  "limitations": [
+    "External market signals are incomplete",
+    "Risk scores need validation against past shortages"
+  ],
+  "techTags": [
+    "ml",
+    "stats"
+  ],
+  "data": [
+    "Sales and order history",
+    "Supplier delivery performance and lead times",
+    "Stock levels across sites",
+    "Public shortage notices"
+  ],
+  "review": [
+    "Supply planners decide on alternatives and purchases; the system only ranks risk."
+  ],
+  "published": false
+}

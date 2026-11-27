@@ -1,0 +1,64 @@
+{
+  "slug": "regulatory-dossier-assistant",
+  "field": "regulatory",
+  "order": 31,
+  "phase": 2,
+  "status": "Conceptual",
+  "references": [
+    {
+      "title": "ICH M4 — Common Technical Document (CTD)",
+      "url": "https://www.ich.org/page/ctd"
+    },
+    {
+      "title": "Jordan Food and Drug Administration (JFDA)",
+      "url": "https://www.jfda.jo/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Regulatory Dossier Assistant",
+  "area": "Regulatory Affairs",
+  "short": "Checks a registration dossier for missing and inconsistent sections before it reaches the authority.",
+  "symptom": "Registration files come back with deficiency letters",
+  "ingredient": "A completeness checker for CTD dossiers",
+  "directions": "Upload the dossier index and key documents. Get a gap list against the CTD structure and local requirements, with cross-document inconsistencies highlighted.",
+  "problem": "Dossiers are large and assembled by many people, so missing documents and inconsistent data between modules are common.",
+  "why": "Each deficiency letter can delay a product launch by months.",
+  "solution": "Maps the dossier to the CTD structure and the target authority’s checklist, flags missing items, and compares key data such as strengths, shelf life and storage conditions across documents.",
+  "technology": [
+    "Document classification",
+    "Cross-document consistency checks",
+    "Requirement checklists"
+  ],
+  "impact": [
+    "Fewer deficiency letters",
+    "Faster submissions",
+    "One place to track variations"
+  ],
+  "architecture": [
+    "Dossier documents",
+    "Map to CTD modules",
+    "Checklist comparison",
+    "Consistency checks",
+    "Regulatory specialist review"
+  ],
+  "limitations": [
+    "Local requirements change and must be kept up to date",
+    "Regulatory judgment and sign-off stay with the specialist"
+  ],
+  "techTags": [
+    "llm",
+    "rules"
+  ],
+  "data": [
+    "Dossier documents (Modules 1–5)",
+    "CTD/eCTD structure and the target authority’s checklist",
+    "Approved product information"
+  ],
+  "review": [
+    "The regulatory specialist reviews every gap and signs off the submission."
+  ],
+  "published": false
+}

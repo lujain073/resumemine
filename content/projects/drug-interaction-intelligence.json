@@ -1,0 +1,65 @@
+{
+  "slug": "drug-interaction-intelligence",
+  "order": 62,
+  "title": "Drug Interaction Intelligence",
+  "area": "Drug Interaction Intelligence",
+  "short": "An interaction checker that explains clinical significance, not just a red warning.",
+  "phase": 2,
+  "status": "Conceptual",
+  "problem": "Classic checkers fire too many alerts and explain none of them.",
+  "why": "Polypharmacy is rising; ignored alerts include the dangerous ones.",
+  "solution": "Matches the full medication list against a curated knowledge base and explains each relevant interaction in plain language.",
+  "technology": [
+    "Interaction database",
+    "Severity filter",
+    "Grounded explanations"
+  ],
+  "impact": [
+    "Fewer ignored alerts",
+    "Faster prescriber calls",
+    "Clearer counseling"
+  ],
+  "architecture": [
+    "Medication list",
+    "Normalization to drug codes",
+    "Knowledge base lookup",
+    "Severity filter",
+    "Grounded explanation"
+  ],
+  "limitations": [
+    "Explains only from cited sources",
+    "Herbal products poorly covered"
+  ],
+  "references": [
+    {
+      "title": "DrugBank — drug and interaction data",
+      "url": "https://go.drugbank.com/"
+    },
+    {
+      "title": "openFDA — drug labeling data",
+      "url": "https://open.fda.gov/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "symptom": "Interaction alerts nobody reads",
+  "ingredient": "Interaction alerts that explain themselves",
+  "directions": "Take with the full medication list. Explains mechanism, severity and what to do — in English or Arabic.",
+  "field": "hospital",
+  "techTags": [
+    "rules",
+    "llm",
+    "rag"
+  ],
+  "data": [
+    "Complete medication list",
+    "Licensed interaction knowledge base",
+    "Patient factors (age, renal and hepatic function)"
+  ],
+  "review": [
+    "The pharmacist decides on management and communicates with the prescriber."
+  ],
+  "published": false
+}

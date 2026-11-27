@@ -1,0 +1,61 @@
+{
+  "slug": "sales-forecasting-agent",
+  "field": "commercial",
+  "order": 54,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "ml",
+    "stats",
+    "agent"
+  ],
+  "references": [
+    {
+      "title": "Hyndman & Athanasopoulos — Forecasting: Principles and Practice (open textbook)",
+      "url": "https://otexts.com/fpp3/"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Pharmaceutical Sales Forecasting Agent",
+  "area": "Sales forecasting & territory performance",
+  "short": "Forecasts sales by product, region and channel, explains the drivers, and updates targets as new data arrives.",
+  "symptom": "Sales forecasts are guesses in a spreadsheet",
+  "ingredient": "A forecasting analyst for commercial teams",
+  "directions": "Connect monthly sales, stock at distributors and planned activities. Get forecasts with ranges, driver explanations and territory gaps.",
+  "problem": "Forecasts are often built top-down from last year plus a percentage, ignoring seasonality, distributor stock, tenders, launches and shortages.",
+  "why": "Bad forecasts drive both stock-outs and expiries, misaligned production and unfair territory targets.",
+  "solution": "Builds statistical and machine-learning forecasts per product and territory with seasonality and known events, separates real demand from distributor stock movements, and explains in plain language what drives each forecast.",
+  "architecture": [
+    "Sales, distributor stock & events",
+    "Data cleaning & demand signal",
+    "Forecast models with ranges",
+    "Driver explanations & territory gaps",
+    "Commercial & supply review"
+  ],
+  "data": [
+    "Historical sales by product, region and channel",
+    "Distributor stock and orders",
+    "Promotions, tenders, launches and shortages"
+  ],
+  "technology": [
+    "Time-series forecasting",
+    "Machine learning with explainability",
+    "Agent that refreshes and reports"
+  ],
+  "impact": [
+    "More accurate supply planning",
+    "Fairer territory targets",
+    "Fewer stock-outs and expiries"
+  ],
+  "limitations": [
+    "Unexpected events (shortages, policy changes) break historical patterns",
+    "Forecast ranges must be communicated, not just single numbers"
+  ],
+  "review": [
+    "Sales, marketing and supply planning agree the final consensus forecast."
+  ],
+  "published": false
+}

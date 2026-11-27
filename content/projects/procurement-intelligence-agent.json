@@ -1,0 +1,61 @@
+{
+  "slug": "procurement-intelligence-agent",
+  "field": "supply",
+  "order": 43,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "agent",
+    "llm",
+    "ml"
+  ],
+  "references": [
+    {
+      "title": "ICH quality guidelines (Q10 — oversight of outsourced activities and purchased materials)",
+      "url": "https://www.ich.org/page/quality-guidelines"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "Pharmaceutical Procurement Intelligence Agent",
+  "area": "Procurement planning",
+  "short": "Prepares purchase plans, compares quotations and tenders, and flags price and supply risks for the procurement team.",
+  "symptom": "Quotations and tenders are compared by hand",
+  "ingredient": "A procurement analyst that never gets tired",
+  "directions": "Upload needs, quotations and contract terms. Get a side-by-side comparison, a recommended purchase plan and the risks of each option.",
+  "problem": "Procurement teams compare quotations with different pack sizes, currencies, lead times, shelf lives and payment terms, while tracking contracts and tender deadlines manually.",
+  "why": "Poor comparisons lead to overpaying, short-dated stock or unreliable suppliers.",
+  "solution": "Normalizes quotations to cost per unit and per treatment, checks remaining shelf life and lead time against need dates, links supplier risk scores, and drafts a purchase plan and tender summary for approval.",
+  "architecture": [
+    "Needs & quotations",
+    "Normalization (unit, currency, shelf life)",
+    "Option scoring with supplier risk",
+    "Draft purchase plan",
+    "Procurement approval"
+  ],
+  "data": [
+    "Requirements and consumption",
+    "Supplier quotations and contracts",
+    "Supplier risk and delivery history"
+  ],
+  "technology": [
+    "Document extraction",
+    "Multi-criteria scoring",
+    "AI agent workflow with approval step"
+  ],
+  "impact": [
+    "Better value for money",
+    "Fewer short-dated deliveries",
+    "Faster, documented decisions"
+  ],
+  "limitations": [
+    "Tender rules and procurement law must be followed exactly",
+    "Prices and availability change quickly"
+  ],
+  "review": [
+    "Procurement officers and, where required, tender committees make every award decision."
+  ],
+  "published": false
+}

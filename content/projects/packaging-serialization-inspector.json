@@ -1,0 +1,60 @@
+{
+  "slug": "packaging-serialization-inspector",
+  "field": "manufacturing",
+  "order": 13,
+  "phase": 1,
+  "status": "Conceptual",
+  "techTags": [
+    "cv",
+    "rules"
+  ],
+  "references": [
+    {
+      "title": "GS1 Healthcare — identification and traceability standards",
+      "url": "https://www.gs1.org/industries/healthcare"
+    }
+  ],
+  "screenshots": [],
+  "video": "",
+  "seoTitle": "",
+  "seoDescription": "",
+  "title": "AI Packaging & Serialization Inspector",
+  "area": "Packaging, serialization & track and trace",
+  "short": "Checks every pack for print, label and code errors with computer vision, and reconciles serial numbers before release.",
+  "symptom": "Packaging errors slip through to the market",
+  "ingredient": "A vision inspector for packaging lines",
+  "directions": "Install a camera on the line and connect the serialization system. Defects and code mismatches are flagged in real time for the line supervisor.",
+  "problem": "Wrong batch or expiry prints, label mix-ups, damaged cartons and unreadable 2D codes cause recalls; serial-number reconciliation across levels is complex.",
+  "why": "Packaging errors are a frequent cause of recalls and can put the wrong medicine or information in a patient’s hands.",
+  "solution": "A vision model inspects text (batch, expiry), label identity, carton integrity and code readability on every unit, while rules reconcile serial numbers between unit, case and pallet before upload.",
+  "architecture": [
+    "Line camera images",
+    "Vision inspection (OCR + defects)",
+    "Serial-number reconciliation",
+    "Reject & alert",
+    "Supervisor release"
+  ],
+  "data": [
+    "Labelled images of good and defective packs",
+    "Approved artwork and variable data",
+    "Serialization records (unit, case, pallet)"
+  ],
+  "technology": [
+    "Computer vision and OCR",
+    "Rule-based reconciliation",
+    "GS1 data standards"
+  ],
+  "impact": [
+    "Fewer packaging recalls",
+    "Faster batch release",
+    "Cleaner serialization data"
+  ],
+  "limitations": [
+    "Vision systems must be validated for each product and line",
+    "Lighting and line speed affect accuracy"
+  ],
+  "review": [
+    "Line supervisors and QA confirm rejects and approve batch release."
+  ],
+  "published": false
+}
